@@ -58,7 +58,7 @@
           "field": "life_expectancy",
           "type": "quantitative",
           "title": "Age (years)",
-          "scale": { "domain": [60, 90] },
+          "scale": { "domain": [0, 90] },
           "axis": {
             "titleColor": "#64748B",
             "titleFontSize": 11,
@@ -87,7 +87,7 @@
         "y": {
           "field": "healthy_life_expectancy",
           "type": "quantitative",
-          "scale": { "domain": [60, 90] }
+          "scale": { "domain": [0, 90] }
         },
         "tooltip": [
           {"field": "year", "type": "quantitative", "title": "Year", "format": "d"},
@@ -114,7 +114,7 @@
         "clip": true
       },
       "encoding": {
-        "y": {"field": "life_expectancy", "type": "quantitative", "scale": {"domain": [60, 90]}},
+        "y": {"field": "life_expectancy", "type": "quantitative", "scale": {"domain": [0, 90]}},
         "text": {"field": "label", "type": "nominal"}
       }
     },
@@ -135,7 +135,7 @@
         "clip": true
       },
       "encoding": {
-        "y": {"field": "healthy_life_expectancy", "type": "quantitative", "scale": {"domain": [60, 90]}},
+        "y": {"field": "healthy_life_expectancy", "type": "quantitative", "scale": {"domain": [0, 90]}},
         "text": {"field": "label", "type": "nominal"}
       }
     },
@@ -156,12 +156,12 @@
         "clip": true
       },
       "encoding": {
-        "y": {"field": "mid", "type": "quantitative", "scale": {"domain": [60, 90]}},
+        "y": {"field": "mid", "type": "quantitative", "scale": {"domain": [0, 90]}},
         "text": {"field": "label", "type": "nominal"}
       }
     }
   ],
   "config": {
-    "view": {"stroke": null}
+    "view": { "stroke": null }
   }
 }

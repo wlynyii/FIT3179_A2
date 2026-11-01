@@ -81,7 +81,7 @@
           "field": "tobacco_use_pct",
           "type": "quantitative",
           "title": "Prevalence (% of population)",
-          "scale": {"domain": [10, 35], "zero": false},
+          "scale": {"domain": [0, 35], "zero": false},
           "axis": {
             "titleFontSize": 11,
             "titleColor": "#64748B",
