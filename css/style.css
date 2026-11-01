@@ -32,7 +32,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Page Header */
 .header-container {
   max-width: 1200px;
   margin: 0 auto 36px;
@@ -65,7 +64,6 @@ h1 {
   max-width: 720px;
 }
 
-/* Story Card Containers */
 .story-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -94,7 +92,6 @@ h1 {
   flex-direction: row-reverse;
 }
 
-/* Story Column Layout */
 .story-text {
   flex: 0 0 35%;
   display: flex;
@@ -124,7 +121,6 @@ h1 {
   color: var(--color-text-main);
 }
 
-/* Stat Badges / Callout Cards */
 .stats {
   display: grid;
   grid-template-columns: 1fr;
@@ -163,7 +159,6 @@ h1 {
   margin-top: 2px;
 }
 
-/* Explanations & Meta */
 .how {
   margin-top: auto;
   font-size: 0.825rem;
@@ -179,7 +174,6 @@ h1 {
   margin-top: 14px;
 }
 
-/* Interactive Controls Restyling (Vega-Embed Forms) */
 .vega-bind {
   margin-bottom: 14px;
   font-size: 0.875rem;
@@ -206,7 +200,6 @@ h1 {
   border-color: var(--color-primary);
 }
 
-/* Responsive adjustments */
 @media (max-width: 900px) {
   body {
     padding: 24px 12px 60px;
@@ -228,7 +221,6 @@ h1 {
   }
 }
 
-/* Introduction Card */
 .intro-card {
   background: linear-gradient(135deg, #FFFFFF 0%, #F8FAF9 100%);
   border: 1px solid var(--color-border);
@@ -265,7 +257,6 @@ h1 {
   margin-bottom: 24px;
 }
 
-/* Feature/Pill Highlights */
 .intro-highlights {
   display: flex;
   flex-wrap: wrap;
@@ -303,7 +294,6 @@ h1 {
   }
 }
 
-/* ---------- Conclusion ---------- */
 .conclusion {
   background: #0A4D52;
   color: #F1F5F4;
