@@ -1,0 +1,73 @@
+sex,age_group,n_conditions,count,base_persons,pct,dots_per_100
+Male,0-14,No conditions,1956272,2188890,89.37,89
+Male,0-14,One condition,218853,2188890,10.0,10
+Male,0-14,Two conditions,13081,2188890,0.6,1
+Male,0-14,Three or more conditions,684,2188890,0.03,0
+Male,15-24,No conditions,1178534,1415921,83.23,83
+Male,15-24,One condition,211669,1415921,14.95,15
+Male,15-24,Two conditions,23839,1415921,1.68,2
+Male,15-24,Three or more conditions,1879,1415921,0.13,0
+Male,25-44,No conditions,2563185,3183666,80.51,81
+Male,25-44,One condition,520799,3183666,16.36,16
+Male,25-44,Two conditions,84544,3183666,2.66,3
+Male,25-44,Three or more conditions,15138,3183666,0.48,0
+Male,45-64,No conditions,1834886,2789258,65.78,66
+Male,45-64,One condition,672805,2789258,24.12,24
+Male,45-64,Two conditions,195830,2789258,7.02,7
+Male,45-64,Three or more conditions,85737,2789258,3.07,3
+Male,65-84,No conditions,659747,1697108,38.87,39
+Male,65-84,One condition,559644,1697108,32.98,33
+Male,65-84,Two conditions,282732,1697108,16.66,17
+Male,65-84,Three or more conditions,194985,1697108,11.49,11
+Male,85+,No conditions,45073,187709,24.01,24
+Male,85+,One condition,61430,187709,32.73,33
+Male,85+,Two conditions,41814,187709,22.28,22
+Male,85+,Three or more conditions,39392,187709,20.99,21
+Female,0-14,No conditions,1901946,2071009,91.84,92
+Female,0-14,One condition,158289,2071009,7.64,8
+Female,0-14,Two conditions,10230,2071009,0.49,0
+Female,0-14,Three or more conditions,544,2071009,0.03,0
+Female,15-24,No conditions,1039896,1361242,76.39,76
+Female,15-24,One condition,270920,1361242,19.9,20
+Female,15-24,Two conditions,47040,1361242,3.46,4
+Female,15-24,Three or more conditions,3386,1361242,0.25,0
+Female,25-44,No conditions,2500177,3335042,74.97,75
+Female,25-44,One condition,653900,3335042,19.61,20
+Female,25-44,Two conditions,151076,3335042,4.53,4
+Female,25-44,Three or more conditions,29889,3335042,0.9,1
+Female,45-64,No conditions,1849047,2972530,62.2,62
+Female,45-64,One condition,740565,2972530,24.91,25
+Female,45-64,Two conditions,256633,2972530,8.63,9
+Female,45-64,Three or more conditions,126285,2972530,4.25,4
+Female,65-84,No conditions,712997,1860369,38.33,38
+Female,65-84,One condition,622871,1860369,33.48,34
+Female,65-84,Two conditions,314074,1860369,16.88,17
+Female,65-84,Three or more conditions,210427,1860369,11.31,11
+Female,85+,No conditions,60778,293764,20.69,21
+Female,85+,One condition,99773,293764,33.96,34
+Female,85+,Two conditions,69436,293764,23.64,23
+Female,85+,Three or more conditions,63777,293764,21.71,22
+Persons,0-14,No conditions,3858221,4259905,90.57,91
+Persons,0-14,One condition,377138,4259905,8.85,9
+Persons,0-14,Two conditions,23316,4259905,0.55,0
+Persons,0-14,Three or more conditions,1230,4259905,0.03,0
+Persons,15-24,No conditions,2218433,2777173,79.88,80
+Persons,15-24,One condition,482595,2777173,17.38,17
+Persons,15-24,Two conditions,70881,2777173,2.55,3
+Persons,15-24,Three or more conditions,5264,2777173,0.19,0
+Persons,25-44,No conditions,5063361,6518727,77.67,78
+Persons,25-44,One condition,1174709,6518727,18.02,18
+Persons,25-44,Two conditions,235630,6518727,3.61,3
+Persons,25-44,Three or more conditions,45027,6518727,0.69,1
+Persons,45-64,No conditions,3683932,5761772,63.94,64
+Persons,45-64,One condition,1413363,5761772,24.53,24
+Persons,45-64,Two conditions,452451,5761772,7.85,8
+Persons,45-64,Three or more conditions,212026,5761772,3.68,4
+Persons,65-84,No conditions,1372735,3557483,38.59,39
+Persons,65-84,One condition,1182515,3557483,33.24,33
+Persons,65-84,Two conditions,596813,3557483,16.78,17
+Persons,65-84,Three or more conditions,405420,3557483,11.4,11
+Persons,85+,No conditions,105858,481488,21.99,22
+Persons,85+,One condition,161207,481488,33.48,34
+Persons,85+,Two conditions,111248,481488,23.11,23
+Persons,85+,Three or more conditions,103175,481488,21.43,21

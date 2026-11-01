@@ -1,0 +1,253 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Sankey Diagram connecting Birthplace Regions to Chronic Conditions in Australia.",
+  "width": 640,
+  "height": 450,
+  "padding": {"top": 20, "left": 10, "right": 10, "bottom": 30},
+  "autosize": {"type": "fit", "contains": "padding"},
+
+  "signals": [
+    {
+      "name": "cohort_filter",
+      "value": "Overseas-Born Only",
+      "bind": {
+        "input": "radio",
+        "options": ["Overseas-Born Only", "All Cohorts (incl. Australia)"],
+        "name": "Population View: "
+      }
+    },
+    {
+      "name": "hovered",
+      "value": null,
+      "on": [
+        {"events": "@link:pointerover", "update": "datum"},
+        {"events": "@link:pointerout", "update": "null"},
+        {"events": "@source_rect:pointerover", "update": "{birth_region: datum.key}"},
+        {"events": "@source_rect:pointerout", "update": "null"},
+        {"events": "@target_rect:pointerover", "update": "{condition: datum.key}"},
+        {"events": "@target_rect:pointerout", "update": "null"}
+      ]
+    }
+  ],
+
+  "data": [
+    {
+      "name": "raw_data",
+      "url": "data/chart07_birth_region_conditions.csv",
+      "format": {"type": "csv", "parse": {"count": "number", "rate_pct": "number", "is_australia": "number"}},
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "cohort_filter === 'All Cohorts (incl. Australia)' || datum.is_australia === 0"
+        }
+      ]
+    },
+    {
+      "name": "source_totals",
+      "source": "raw_data",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["birth_region"],
+          "fields": ["count"],
+          "ops": ["sum"],
+          "as": ["total"]
+        },
+        {
+          "type": "stack",
+          "field": "total",
+          "groupby": [],
+          "sort": {"field": "total", "order": "descending"},
+          "as": ["y0", "y1"]
+        }
+      ]
+    },
+    {
+      "name": "target_totals",
+      "source": "raw_data",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["condition"],
+          "fields": ["count"],
+          "ops": ["sum"],
+          "as": ["total"]
+        },
+        {
+          "type": "stack",
+          "field": "total",
+          "groupby": [],
+          "sort": {"field": "total", "order": "descending"},
+          "as": ["y0", "y1"]
+        }
+      ]
+    },
+    {
+      "name": "links",
+      "source": "raw_data",
+      "transform": [
+        {
+          "type": "stack",
+          "groupby": ["birth_region"],
+          "sort": {"field": "condition", "order": "ascending"},
+          "field": "count",
+          "as": ["sy0", "sy1"]
+        },
+        {
+          "type": "stack",
+          "groupby": ["condition"],
+          "sort": {"field": "birth_region", "order": "ascending"},
+          "field": "count",
+          "as": ["ty0", "ty1"]
+        },
+        {
+          "type": "lookup",
+          "from": "source_totals",
+          "key": "birth_region",
+          "fields": ["birth_region"],
+          "as": ["src_node"]
+        },
+        {
+          "type": "lookup",
+          "from": "target_totals",
+          "key": "condition",
+          "fields": ["condition"],
+          "as": ["tgt_node"]
+        },
+        {
+          "type": "formula",
+          "expr": "scale('y_source', datum.src_node.y0 + (datum.sy0 + datum.sy1) / 2)",
+          "as": "sy"
+        },
+        {
+          "type": "formula",
+          "expr": "scale('y_target', datum.tgt_node.y0 + (datum.ty0 + datum.ty1) / 2)",
+          "as": "ty"
+        },
+        {
+          "type": "formula",
+          "expr": "max(1, (scale('y_source', datum.src_node.y0 + datum.sy1) - scale('y_source', datum.src_node.y0 + datum.sy0)))",
+          "as": "stroke_width"
+        },
+        {
+          "type": "linkpath",
+          "sourceX": {"expr": "180"},
+          "sourceY": {"expr": "datum.sy"},
+          "targetX": {"expr": "width - 180"},
+          "targetY": {"expr": "datum.ty"},
+          "shape": "diagonal"
+        }
+      ]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "y_source",
+      "type": "linear",
+      "range": [20, {"signal": "height - 20"}],
+      "domain": {"data": "source_totals", "field": "y1"}
+    },
+    {
+      "name": "y_target",
+      "type": "linear",
+      "range": [20, {"signal": "height - 20"}],
+      "domain": {"data": "target_totals", "field": "y1"}
+    },
+    {
+      "name": "color_source",
+      "type": "ordinal",
+      "domain": {"data": "source_totals", "field": "birth_region"},
+      "range": [
+        "#0A4D52", "#186A6F", "#2A858A", "#68A691", 
+        "#8CBFB0", "#C17C5F", "#D46A52", "#E06D53", 
+        "#7A2816", "#94A3B8"
+      ]
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "path",
+      "name": "link",
+      "from": {"data": "links"},
+      "encode": {
+        "update": {
+          "path": {"field": "path"},
+          "stroke": {"scale": "color_source", "field": "birth_region"},
+          "strokeWidth": {"field": "stroke_width"},
+          "strokeOpacity": {
+            "signal": "hovered === null ? 0.4 : (hovered.birth_region === datum.birth_region || hovered.condition === datum.condition ? 0.85 : 0.08)"
+          },
+          "tooltip": {
+            "signal": "{'Birth Region': datum.birth_region, 'Condition': datum.condition, 'Affected Population': format(datum.count, ','), 'Prevalence Rate': format(datum.rate_pct, '.1f') + '%'}"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "name": "source_rect",
+      "from": {"data": "source_totals"},
+      "encode": {
+        "update": {
+          "x": {"value": 165},
+          "width": {"value": 15},
+          "y": {"scale": "y_source", "field": "y0"},
+          "y2": {"scale": "y_source", "field": "y1"},
+          "fill": {"scale": "color_source", "field": "birth_region"},
+          "fillOpacity": {"value": 0.95},
+          "cursor": {"value": "pointer"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "source_totals"},
+      "encode": {
+        "update": {
+          "x": {"value": 155},
+          "y": {"signal": "(scale('y_source', datum.y0) + scale('y_source', datum.y1)) / 2"},
+          "text": {"field": "birth_region"},
+          "align": {"value": "right"},
+          "baseline": {"value": "middle"},
+          "fontSize": {"value": 10},
+          "fontWeight": {"value": 600},
+          "fill": {"value": "#1E293B"}
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "name": "target_rect",
+      "from": {"data": "target_totals"},
+      "encode": {
+        "update": {
+          "x": {"signal": "width - 180"},
+          "width": {"value": 15},
+          "y": {"scale": "y_target", "field": "y0"},
+          "y2": {"scale": "y_target", "field": "y1"},
+          "fill": {"value": "#475569"},
+          "fillOpacity": {"value": 0.85},
+          "cursor": {"value": "pointer"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "target_totals"},
+      "encode": {
+        "update": {
+          "x": {"signal": "width - 155"},
+          "y": {"signal": "(scale('y_target', datum.y0) + scale('y_target', datum.y1)) / 2"},
+          "text": {"field": "condition"},
+          "align": {"value": "left"},
+          "baseline": {"value": "middle"},
+          "fontSize": {"value": 10.5},
+          "fontWeight": {"value": 600},
+          "fill": {"value": "#1E293B"}
+        }
+      }
+    }
+  ]
+}

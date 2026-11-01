@@ -1,0 +1,125 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Condition Disparities Between Women and Men",
+    "subtitle": [
+      "Ratio comparing condition rates across ages. Darker tiles indicate higher prevalence in women;",
+      "lighter tiles indicate higher prevalence in men."
+    ],
+    "anchor": "start",
+    "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "fontSize": 16,
+    "fontWeight": 700,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#64748B",
+    "offset": 14
+  },
+  "width": 560,
+  "height": 320,
+  "padding": {"left": 10, "right": 20, "top": 10, "bottom": 10},
+  "data": {
+    "url": "data/chart04_sex_ratio_by_condition_age.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "calculate": "datum.low_count_flag === 1 ? 'Low sample size' : 'Reliable count'",
+      "as": "sample_note"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "age_band",
+      "type": "ordinal",
+      "sort": [
+        "0-4", "5-9", "10-14", "15-19", "20-24", "25-29",
+        "30-34", "35-39", "40-44", "45-49", "50-54", "55-59",
+        "60-64", "65-69", "70-74", "75-79", "80-84", "85+"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0,
+        "labelFontSize": 10,
+        "labelColor": "#64748B",
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "y": {
+      "field": "condition",
+      "type": "nominal",
+      "sort": [
+        "Arthritis",
+        "Mental health condition",
+        "Asthma",
+        "Cancer",
+        "Lung condition",
+        "Diabetes",
+        "Kidney disease",
+        "Dementia",
+        "Stroke",
+        "Heart disease"
+      ],
+      "axis": {
+        "title": null,
+        "labelFontSize": 11,
+        "labelColor": "#1E293B",
+        "labelLimit": 190,
+        "domain": false,
+        "ticks": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.5,
+        "cornerRadius": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "log2_ratio",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-1, 0, 1],
+            "range": ["#F8FAFC", "#E8A596", "#7A2816"],
+            "clamp": true
+          },
+          "legend": {
+            "title": "Ratio (Women vs. Men)",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 400,
+            "gradientThickness": 10,
+            "titleFontSize": 11,
+            "titleColor": "#64748B",
+            "labelFontSize": 10,
+            "labelColor": "#64748B",
+            "values": [-1, -0.5, 0, 0.5, 1],
+            "labelExpr": "datum.value == 0 ? 'Parity' : (datum.value > 0 ? 'Women ' : 'Men ') + format(pow(2, abs(datum.value)), '.1f') + '×'"
+          }
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum.low_count_flag === 1",
+            "value": 0.35
+          },
+          "value": 1
+        },
+        "tooltip": [
+          {"field": "condition", "type": "nominal", "title": "Condition"},
+          {"field": "age_band", "type": "ordinal", "title": "Age group"},
+          {"field": "female_rate_pct", "type": "quantitative", "title": "% of women", "format": ".2~f"},
+          {"field": "male_rate_pct", "type": "quantitative", "title": "% of men", "format": ".2~f"},
+          {"field": "ratio_female_to_male", "type": "quantitative", "title": "Ratio (W:M)", "format": ".2f"},
+          {"field": "sample_note", "type": "nominal", "title": "Status"}
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null}
+  }
+}

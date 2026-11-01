@@ -1,0 +1,101 @@
+birth_region,condition,count,base_persons,rate_pct,region_lon,region_lat,dest_lon,dest_lat,is_australia
+Australia (incl. External Territories),Arthritis,1508195,16333538,9.234,134,-25,134,-25,1
+Oceania and Antarctica (excl. Australia),Arthritis,60470,661625,9.14,172,-30,134,-25,0
+North-West Europe,Arthritis,234961,1411945,16.641,2,52,134,-25,0
+Southern and Eastern Europe,Arthritis,123998,633846,19.563,22,45,134,-25,0
+North Africa and the Middle East,Arthritis,39502,438118,9.016,38,28,134,-25,0
+South-East Asia,Arthritis,47119,1021210,4.614,108,5,134,-25,0
+North-East Asia,Arthritis,20699,839732,2.465,115,36,134,-25,0
+Southern and Central Asia,Arthritis,30457,1125521,2.706,78,25,134,-25,0
+Americas,Arthritis,23577,331005,7.123,-85,20,134,-25,0
+Sub-Saharan Africa,Arthritis,21745,361452,6.016,22,-3,134,-25,0
+Australia (incl. External Territories),Asthma,1680155,16333538,10.287,134,-25,134,-25,1
+Oceania and Antarctica (excl. Australia),Asthma,60501,661625,9.144,172,-30,134,-25,0
+North-West Europe,Asthma,114466,1411945,8.107,2,52,134,-25,0
+Southern and Eastern Europe,Asthma,30272,633846,4.776,22,45,134,-25,0
+North Africa and the Middle East,Asthma,22494,438118,5.134,38,28,134,-25,0
+South-East Asia,Asthma,50128,1021210,4.909,108,5,134,-25,0
+North-East Asia,Asthma,16764,839732,1.996,115,36,134,-25,0
+Southern and Central Asia,Asthma,32222,1125521,2.863,78,25,134,-25,0
+Americas,Asthma,21436,331005,6.476,-85,20,134,-25,0
+Sub-Saharan Africa,Asthma,21218,361452,5.87,22,-3,134,-25,0
+Australia (incl. External Territories),Cancer,510761,16333538,3.127,134,-25,134,-25,1
+Oceania and Antarctica (excl. Australia),Cancer,22046,661625,3.332,172,-30,134,-25,0
+North-West Europe,Cancer,83845,1411945,5.938,2,52,134,-25,0
+Southern and Eastern Europe,Cancer,36917,633846,5.824,22,45,134,-25,0
+North Africa and the Middle East,Cancer,9695,438118,2.213,38,28,134,-25,0
+South-East Asia,Cancer,17855,1021210,1.748,108,5,134,-25,0
+North-East Asia,Cancer,13548,839732,1.613,115,36,134,-25,0
+Southern and Central Asia,Cancer,8366,1125521,0.743,78,25,134,-25,0
+Americas,Cancer,8687,331005,2.624,-85,20,134,-25,0
+Sub-Saharan Africa,Cancer,9004,361452,2.491,22,-3,134,-25,0
+Australia (incl. External Territories),Dementia,112877,16333538,0.691,134,-25,134,-25,1
+Oceania and Antarctica (excl. Australia),Dementia,3944,661625,0.596,172,-30,134,-25,0
+North-West Europe,Dementia,25394,1411945,1.799,2,52,134,-25,0
+Southern and Eastern Europe,Dementia,22389,633846,3.532,22,45,134,-25,0
+North Africa and the Middle East,Dementia,3838,438118,0.876,38,28,134,-25,0
+South-East Asia,Dementia,4890,1021210,0.479,108,5,134,-25,0
+North-East Asia,Dementia,3696,839732,0.44,115,36,134,-25,0
+Southern and Central Asia,Dementia,2617,1125521,0.233,78,25,134,-25,0
+Americas,Dementia,1787,331005,0.54,-85,20,134,-25,0
+Sub-Saharan Africa,Dementia,1650,361452,0.456,22,-3,134,-25,0
+Australia (incl. External Territories),Diabetes,705538,16333538,4.32,134,-25,134,-25,1
+Oceania and Antarctica (excl. Australia),Diabetes,44276,661625,6.692,172,-30,134,-25,0
+North-West Europe,Diabetes,106421,1411945,7.537,2,52,134,-25,0
+Southern and Eastern Europe,Diabetes,83123,633846,13.114,22,45,134,-25,0
+North Africa and the Middle East,Diabetes,39802,438118,9.085,38,28,134,-25,0
+South-East Asia,Diabetes,67254,1021210,6.586,108,5,134,-25,0
+North-East Asia,Diabetes,34482,839732,4.106,115,36,134,-25,0
+Southern and Central Asia,Diabetes,65687,1125521,5.836,78,25,134,-25,0
+Americas,Diabetes,13368,331005,4.039,-85,20,134,-25,0
+Sub-Saharan Africa,Diabetes,18054,361452,4.995,22,-3,134,-25,0
+Australia (incl. External Territories),Heart disease,661353,16333538,4.049,134,-25,134,-25,1
+Oceania and Antarctica (excl. Australia),Heart disease,30555,661625,4.618,172,-30,134,-25,0
+North-West Europe,Heart disease,114669,1411945,8.121,2,52,134,-25,0
+Southern and Eastern Europe,Heart disease,66549,633846,10.499,22,45,134,-25,0
+North Africa and the Middle East,Heart disease,21459,438118,4.898,38,28,134,-25,0
+South-East Asia,Heart disease,25406,1021210,2.488,108,5,134,-25,0
+North-East Asia,Heart disease,16704,839732,1.989,115,36,134,-25,0
+Southern and Central Asia,Heart disease,22434,1125521,1.993,78,25,134,-25,0
+Americas,Heart disease,9070,331005,2.74,-85,20,134,-25,0
+Sub-Saharan Africa,Heart disease,11163,361452,3.088,22,-3,134,-25,0
+Australia (incl. External Territories),Kidney disease,152876,16333538,0.936,134,-25,134,-25,1
+Oceania and Antarctica (excl. Australia),Kidney disease,7503,661625,1.134,172,-30,134,-25,0
+North-West Europe,Kidney disease,22068,1411945,1.563,2,52,134,-25,0
+Southern and Eastern Europe,Kidney disease,15115,633846,2.385,22,45,134,-25,0
+North Africa and the Middle East,Kidney disease,6194,438118,1.414,38,28,134,-25,0
+South-East Asia,Kidney disease,8190,1021210,0.802,108,5,134,-25,0
+North-East Asia,Kidney disease,4774,839732,0.569,115,36,134,-25,0
+Southern and Central Asia,Kidney disease,5225,1125521,0.464,78,25,134,-25,0
+Americas,Kidney disease,2264,331005,0.684,-85,20,134,-25,0
+Sub-Saharan Africa,Kidney disease,2415,361452,0.668,22,-3,134,-25,0
+Australia (incl. External Territories),Lung condition,320950,16333538,1.965,134,-25,134,-25,1
+Oceania and Antarctica (excl. Australia),Lung condition,13054,661625,1.973,172,-30,134,-25,0
+North-West Europe,Lung condition,54444,1411945,3.856,2,52,134,-25,0
+Southern and Eastern Europe,Lung condition,18121,633846,2.859,22,45,134,-25,0
+North Africa and the Middle East,Lung condition,5279,438118,1.205,38,28,134,-25,0
+South-East Asia,Lung condition,5599,1021210,0.548,108,5,134,-25,0
+North-East Asia,Lung condition,3395,839732,0.404,115,36,134,-25,0
+Southern and Central Asia,Lung condition,3688,1125521,0.328,78,25,134,-25,0
+Americas,Lung condition,3263,331005,0.986,-85,20,134,-25,0
+Sub-Saharan Africa,Lung condition,3161,361452,0.875,22,-3,134,-25,0
+Australia (incl. External Territories),Mental health condition,1816564,16333538,11.122,134,-25,134,-25,1
+Oceania and Antarctica (excl. Australia),Mental health condition,51979,661625,7.856,172,-30,134,-25,0
+North-West Europe,Mental health condition,134282,1411945,9.51,2,52,134,-25,0
+Southern and Eastern Europe,Mental health condition,53902,633846,8.504,22,45,134,-25,0
+North Africa and the Middle East,Mental health condition,28229,438118,6.443,38,28,134,-25,0
+South-East Asia,Mental health condition,34110,1021210,3.34,108,5,134,-25,0
+North-East Asia,Mental health condition,19118,839732,2.277,115,36,134,-25,0
+Southern and Central Asia,Mental health condition,22465,1125521,1.996,78,25,134,-25,0
+Americas,Mental health condition,26941,331005,8.139,-85,20,134,-25,0
+Sub-Saharan Africa,Mental health condition,22403,361452,6.198,22,-3,134,-25,0
+Australia (incl. External Territories),Stroke,153349,16333538,0.939,134,-25,134,-25,1
+Oceania and Antarctica (excl. Australia),Stroke,7185,661625,1.086,172,-30,134,-25,0
+North-West Europe,Stroke,27081,1411945,1.918,2,52,134,-25,0
+Southern and Eastern Europe,Stroke,17086,633846,2.696,22,45,134,-25,0
+North Africa and the Middle East,Stroke,4932,438118,1.126,38,28,134,-25,0
+South-East Asia,Stroke,6959,1021210,0.681,108,5,134,-25,0
+North-East Asia,Stroke,4224,839732,0.503,115,36,134,-25,0
+Southern and Central Asia,Stroke,3632,1125521,0.323,78,25,134,-25,0
+Americas,Stroke,2227,331005,0.673,-85,20,134,-25,0
+Sub-Saharan Africa,Stroke,2194,361452,0.607,22,-3,134,-25,0

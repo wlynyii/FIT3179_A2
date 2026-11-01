@@ -1,0 +1,541 @@
+sex,age_band,age_order,condition,count,base_persons,rate_pct,rank
+Male,0-4,1,Arthritis,260,696698,0.037,8
+Male,5-9,2,Arthritis,512,746469,0.069,8
+Male,10-14,3,Arthritis,1033,745726,0.139,6
+Male,15-19,4,Arthritis,1712,685072,0.25,5
+Male,20-24,5,Arthritis,3936,730861,0.539,4
+Male,25-29,6,Arthritis,7729,800895,0.965,3
+Male,30-34,7,Arthritis,12248,820739,1.492,3
+Male,35-39,8,Arthritis,17826,821327,2.17,3
+Male,40-44,9,Arthritis,24366,740714,3.29,4
+Male,45-49,10,Arthritis,36013,729398,4.937,4
+Male,50-54,11,Arthritis,52622,715902,7.35,2
+Male,55-59,12,Arthritis,74068,688901,10.752,1
+Male,60-64,13,Arthritis,99855,655061,15.244,1
+Male,65-69,14,Arthritis,112389,580265,19.369,1
+Male,70-74,15,Arthritis,121295,521710,23.25,1
+Male,75-79,16,Arthritis,97263,363605,26.75,1
+Male,80-84,17,Arthritis,67579,231529,29.188,1
+Male,85+,18,Arthritis,59355,187714,31.62,2
+Male,0-4,1,Asthma,24693,696698,3.544,1
+Male,5-9,2,Asthma,70121,746469,9.394,1
+Male,10-14,3,Asthma,80607,745726,10.809,1
+Male,15-19,4,Asthma,64057,685072,9.35,1
+Male,20-24,5,Asthma,60824,730861,8.322,2
+Male,25-29,6,Asthma,66604,800895,8.316,2
+Male,30-34,7,Asthma,67628,820739,8.24,2
+Male,35-39,8,Asthma,69381,821327,8.447,2
+Male,40-44,9,Asthma,61342,740714,8.281,2
+Male,45-49,10,Asthma,57542,729398,7.889,2
+Male,50-54,11,Asthma,52027,715902,7.267,3
+Male,55-59,12,Asthma,49153,688901,7.135,4
+Male,60-64,13,Asthma,47411,655061,7.238,5
+Male,65-69,14,Asthma,43166,580265,7.439,6
+Male,70-74,15,Asthma,38254,521710,7.332,6
+Male,75-79,16,Asthma,26823,363605,7.377,6
+Male,80-84,17,Asthma,16663,231529,7.197,7
+Male,85+,18,Asthma,13120,187714,6.989,10
+Male,0-4,1,Cancer,354,696698,0.051,6
+Male,5-9,2,Cancer,888,746469,0.119,7
+Male,10-14,3,Cancer,1074,745726,0.144,5
+Male,15-19,4,Cancer,1232,685072,0.18,6
+Male,20-24,5,Cancer,1824,730861,0.25,6
+Male,25-29,6,Cancer,2689,800895,0.336,6
+Male,30-34,7,Cancer,3941,820739,0.48,5
+Male,35-39,8,Cancer,5589,821327,0.68,6
+Male,40-44,9,Cancer,6880,740714,0.929,6
+Male,45-49,10,Cancer,10129,729398,1.389,6
+Male,50-54,11,Cancer,15919,715902,2.224,6
+Male,55-59,12,Cancer,25691,688901,3.729,6
+Male,60-64,13,Cancer,39232,655061,5.989,6
+Male,65-69,14,Cancer,51924,580265,8.948,4
+Male,70-74,15,Cancer,62680,521710,12.014,4
+Male,75-79,16,Cancer,53239,363605,14.642,4
+Male,80-84,17,Cancer,36606,231529,15.811,4
+Male,85+,18,Cancer,30026,187714,15.996,4
+Male,0-4,1,Dementia,44,696698,0.006,10
+Male,5-9,2,Dementia,66,746469,0.009,10
+Male,10-14,3,Dementia,66,745726,0.009,10
+Male,15-19,4,Dementia,78,685072,0.011,10
+Male,20-24,5,Dementia,143,730861,0.02,10
+Male,25-29,6,Dementia,159,800895,0.02,10
+Male,30-34,7,Dementia,181,820739,0.022,10
+Male,35-39,8,Dementia,246,821327,0.03,10
+Male,40-44,9,Dementia,297,740714,0.04,10
+Male,45-49,10,Dementia,494,729398,0.068,10
+Male,50-54,11,Dementia,848,715902,0.118,10
+Male,55-59,12,Dementia,1514,688901,0.22,10
+Male,60-64,13,Dementia,2673,655061,0.408,10
+Male,65-69,14,Dementia,4573,580265,0.788,10
+Male,70-74,15,Dementia,8776,521710,1.682,10
+Male,75-79,16,Dementia,13539,363605,3.724,10
+Male,80-84,17,Dementia,17390,231529,7.511,6
+Male,85+,18,Dementia,27063,187714,14.417,5
+Male,0-4,1,Diabetes,298,696698,0.043,7
+Male,5-9,2,Diabetes,1060,746469,0.142,5
+Male,10-14,3,Diabetes,2373,745726,0.318,3
+Male,15-19,4,Diabetes,3423,685072,0.5,3
+Male,20-24,5,Diabetes,4704,730861,0.644,3
+Male,25-29,6,Diabetes,6451,800895,0.805,4
+Male,30-34,7,Diabetes,9685,820739,1.18,4
+Male,35-39,8,Diabetes,16983,821327,2.068,4
+Male,40-44,9,Diabetes,24628,740714,3.325,3
+Male,45-49,10,Diabetes,36178,729398,4.96,3
+Male,50-54,11,Diabetes,50701,715902,7.082,4
+Male,55-59,12,Diabetes,68186,688901,9.898,2
+Male,60-64,13,Diabetes,83773,655061,12.789,2
+Male,65-69,14,Diabetes,94527,580265,16.29,2
+Male,70-74,15,Diabetes,98066,521710,18.797,3
+Male,75-79,16,Diabetes,73761,363605,20.286,3
+Male,80-84,17,Diabetes,46671,231529,20.158,3
+Male,85+,18,Diabetes,32142,187714,17.123,3
+Male,0-4,1,Heart disease,1342,696698,0.193,3
+Male,5-9,2,Heart disease,1484,746469,0.199,3
+Male,10-14,3,Heart disease,1660,745726,0.223,4
+Male,15-19,4,Heart disease,1888,685072,0.276,4
+Male,20-24,5,Heart disease,2321,730861,0.318,5
+Male,25-29,6,Heart disease,2871,800895,0.358,5
+Male,30-34,7,Heart disease,3713,820739,0.452,6
+Male,35-39,8,Heart disease,5908,821327,0.719,5
+Male,40-44,9,Heart disease,8982,740714,1.213,5
+Male,45-49,10,Heart disease,17080,729398,2.342,5
+Male,50-54,11,Heart disease,29582,715902,4.132,5
+Male,55-59,12,Heart disease,47583,688901,6.907,5
+Male,60-64,13,Heart disease,70073,655061,10.697,3
+Male,65-69,14,Heart disease,88764,580265,15.297,3
+Male,70-74,15,Heart disease,104813,521710,20.09,2
+Male,75-79,16,Heart disease,89857,363605,24.713,2
+Male,80-84,17,Heart disease,66114,231529,28.555,2
+Male,85+,18,Heart disease,61058,187714,32.527,1
+Male,0-4,1,Kidney disease,836,696698,0.12,5
+Male,5-9,2,Kidney disease,953,746469,0.128,6
+Male,10-14,3,Kidney disease,1025,745726,0.137,7
+Male,15-19,4,Kidney disease,1007,685072,0.147,7
+Male,20-24,5,Kidney disease,1241,730861,0.17,7
+Male,25-29,6,Kidney disease,1590,800895,0.199,7
+Male,30-34,7,Kidney disease,2062,820739,0.251,7
+Male,35-39,8,Kidney disease,2808,821327,0.342,7
+Male,40-44,9,Kidney disease,3394,740714,0.458,8
+Male,45-49,10,Kidney disease,4707,729398,0.645,8
+Male,50-54,11,Kidney disease,6162,715902,0.861,8
+Male,55-59,12,Kidney disease,8231,688901,1.195,9
+Male,60-64,13,Kidney disease,10996,655061,1.679,9
+Male,65-69,14,Kidney disease,13764,580265,2.372,9
+Male,70-74,15,Kidney disease,16827,521710,3.225,9
+Male,75-79,16,Kidney disease,16232,363605,4.464,9
+Male,80-84,17,Kidney disease,13422,231529,5.797,10
+Male,85+,18,Kidney disease,14003,187714,7.46,9
+Male,0-4,1,Lung condition,1323,696698,0.19,4
+Male,5-9,2,Lung condition,1078,746469,0.144,4
+Male,10-14,3,Lung condition,873,745726,0.117,8
+Male,15-19,4,Lung condition,899,685072,0.131,8
+Male,20-24,5,Lung condition,1230,730861,0.168,8
+Male,25-29,6,Lung condition,1529,800895,0.191,8
+Male,30-34,7,Lung condition,1958,820739,0.239,8
+Male,35-39,8,Lung condition,2699,821327,0.329,8
+Male,40-44,9,Lung condition,3937,740714,0.532,7
+Male,45-49,10,Lung condition,6183,729398,0.848,7
+Male,50-54,11,Lung condition,10264,715902,1.434,7
+Male,55-59,12,Lung condition,16589,688901,2.408,7
+Male,60-64,13,Lung condition,24610,655061,3.757,7
+Male,65-69,14,Lung condition,30303,580265,5.222,7
+Male,70-74,15,Lung condition,35778,521710,6.858,7
+Male,75-79,16,Lung condition,32147,363605,8.841,5
+Male,80-84,17,Lung condition,22616,231529,9.768,5
+Male,85+,18,Lung condition,19297,187714,10.28,6
+Male,0-4,1,Mental health condition,1447,696698,0.208,2
+Male,5-9,2,Mental health condition,16776,746469,2.247,2
+Male,10-14,3,Mental health condition,34564,745726,4.635,2
+Male,15-19,4,Mental health condition,49130,685072,7.172,2
+Male,20-24,5,Mental health condition,65407,730861,8.949,1
+Male,25-29,6,Mental health condition,74013,800895,9.241,1
+Male,30-34,7,Mental health condition,72407,820739,8.822,1
+Male,35-39,8,Mental health condition,72910,821327,8.877,1
+Male,40-44,9,Mental health condition,69774,740714,9.42,1
+Male,45-49,10,Mental health condition,73018,729398,10.011,1
+Male,50-54,11,Mental health condition,71921,715902,10.046,1
+Male,55-59,12,Mental health condition,66974,688901,9.722,3
+Male,60-64,13,Mental health condition,61659,655061,9.413,4
+Male,65-69,14,Mental health condition,47043,580265,8.107,5
+Male,70-74,15,Mental health condition,40009,521710,7.669,5
+Male,75-79,16,Mental health condition,25368,363605,6.977,7
+Male,80-84,17,Mental health condition,14763,231529,6.376,9
+Male,85+,18,Mental health condition,15361,187714,8.183,8
+Male,0-4,1,Stroke,210,696698,0.03,9
+Male,5-9,2,Stroke,272,746469,0.036,9
+Male,10-14,3,Stroke,286,745726,0.038,9
+Male,15-19,4,Stroke,317,685072,0.046,9
+Male,20-24,5,Stroke,450,730861,0.062,9
+Male,25-29,6,Stroke,602,800895,0.075,9
+Male,30-34,7,Stroke,878,820739,0.107,9
+Male,35-39,8,Stroke,1391,821327,0.169,9
+Male,40-44,9,Stroke,2062,740714,0.278,9
+Male,45-49,10,Stroke,3598,729398,0.493,9
+Male,50-54,11,Stroke,5691,715902,0.795,9
+Male,55-59,12,Stroke,8930,688901,1.296,8
+Male,60-64,13,Stroke,12623,655061,1.927,8
+Male,65-69,14,Stroke,16447,580265,2.834,8
+Male,70-74,15,Stroke,20813,521710,3.989,8
+Male,75-79,16,Stroke,20022,363605,5.507,8
+Male,80-84,17,Stroke,16500,231529,7.127,8
+Male,85+,18,Stroke,16214,187714,8.638,7
+Female,0-4,1,Arthritis,299,658536,0.045,7
+Female,5-9,2,Arthritis,672,706792,0.095,7
+Female,10-14,3,Arthritis,1235,705687,0.175,5
+Female,15-19,4,Arthritis,2537,650241,0.39,4
+Female,20-24,5,Arthritis,6337,711008,0.891,3
+Female,25-29,6,Arthritis,11091,814560,1.362,3
+Female,30-34,7,Arthritis,16560,878629,1.885,3
+Female,35-39,8,Arthritis,25505,868089,2.938,3
+Female,40-44,9,Arthritis,36957,773773,4.776,3
+Female,45-49,10,Arthritis,59328,772324,7.682,3
+Female,50-54,11,Arthritis,91291,763733,11.953,2
+Female,55-59,12,Arthritis,125776,730984,17.206,1
+Female,60-64,13,Arthritis,164132,705478,23.265,1
+Female,65-69,14,Arthritis,184913,627738,29.457,1
+Female,70-74,15,Arthritis,202196,558730,36.188,1
+Female,75-79,16,Arthritis,165570,397760,41.626,1
+Female,80-84,17,Arthritis,125743,276139,45.536,1
+Female,85+,18,Arthritis,140195,293769,47.723,1
+Female,0-4,1,Asthma,16102,658536,2.445,1
+Female,5-9,2,Asthma,46237,706792,6.542,1
+Female,10-14,3,Asthma,56441,705687,7.998,1
+Female,15-19,4,Asthma,57900,650241,8.904,2
+Female,20-24,5,Asthma,72999,711008,10.267,2
+Female,25-29,6,Asthma,86735,814560,10.648,2
+Female,30-34,7,Asthma,88740,878629,10.1,2
+Female,35-39,8,Asthma,89531,868089,10.314,2
+Female,40-44,9,Asthma,82688,773773,10.686,2
+Female,45-49,10,Asthma,83171,772324,10.769,2
+Female,50-54,11,Asthma,79532,763733,10.414,3
+Female,55-59,12,Asthma,76825,730984,10.51,3
+Female,60-64,13,Asthma,78091,705478,11.069,3
+Female,65-69,14,Asthma,73097,627738,11.645,2
+Female,70-74,15,Asthma,65487,558730,11.721,3
+Female,75-79,16,Asthma,46517,397760,11.695,4
+Female,80-84,17,Asthma,30803,276139,11.155,5
+Female,85+,18,Asthma,27708,293769,9.432,7
+Female,0-4,1,Cancer,359,658536,0.055,6
+Female,5-9,2,Cancer,740,706792,0.105,6
+Female,10-14,3,Cancer,850,705687,0.12,6
+Female,15-19,4,Cancer,1081,650241,0.166,6
+Female,20-24,5,Cancer,1671,711008,0.235,6
+Female,25-29,6,Cancer,2841,814560,0.349,5
+Female,30-34,7,Cancer,5263,878629,0.599,5
+Female,35-39,8,Cancer,9005,868089,1.037,5
+Female,40-44,9,Cancer,12574,773773,1.625,5
+Female,45-49,10,Cancer,20729,772324,2.684,5
+Female,50-54,11,Cancer,29984,763733,3.926,5
+Female,55-59,12,Cancer,37904,730984,5.185,5
+Female,60-64,13,Cancer,46524,705478,6.595,5
+Female,65-69,14,Cancer,51320,627738,8.175,5
+Female,70-74,15,Cancer,56113,558730,10.043,5
+Female,75-79,16,Cancer,44054,397760,11.076,5
+Female,80-84,17,Cancer,30954,276139,11.21,4
+Female,85+,18,Cancer,30264,293769,10.302,6
+Female,0-4,1,Dementia,45,658536,0.007,10
+Female,5-9,2,Dementia,39,706792,0.006,10
+Female,10-14,3,Dementia,41,705687,0.006,10
+Female,15-19,4,Dementia,65,650241,0.01,10
+Female,20-24,5,Dementia,114,711008,0.016,10
+Female,25-29,6,Dementia,123,814560,0.015,10
+Female,30-34,7,Dementia,157,878629,0.018,10
+Female,35-39,8,Dementia,171,868089,0.02,10
+Female,40-44,9,Dementia,245,773773,0.032,10
+Female,45-49,10,Dementia,413,772324,0.053,10
+Female,50-54,11,Dementia,713,763733,0.093,10
+Female,55-59,12,Dementia,1314,730984,0.18,10
+Female,60-64,13,Dementia,2217,705478,0.314,10
+Female,65-69,14,Dementia,4010,627738,0.639,10
+Female,70-74,15,Dementia,8592,558730,1.538,10
+Female,75-79,16,Dementia,14670,397760,3.688,9
+Female,80-84,17,Dementia,22667,276139,8.209,8
+Female,85+,18,Dementia,55404,293769,18.86,3
+Female,0-4,1,Diabetes,267,658536,0.041,8
+Female,5-9,2,Diabetes,1033,706792,0.146,4
+Female,10-14,3,Diabetes,2304,705687,0.326,3
+Female,15-19,4,Diabetes,3367,650241,0.518,3
+Female,20-24,5,Diabetes,4767,711008,0.67,4
+Female,25-29,6,Diabetes,7199,814560,0.884,4
+Female,30-34,7,Diabetes,11381,878629,1.295,4
+Female,35-39,8,Diabetes,16016,868089,1.845,4
+Female,40-44,9,Diabetes,20829,773773,2.692,4
+Female,45-49,10,Diabetes,29640,772324,3.838,4
+Female,50-54,11,Diabetes,40659,763733,5.324,4
+Female,55-59,12,Diabetes,53324,730984,7.295,4
+Female,60-64,13,Diabetes,65898,705478,9.341,4
+Female,65-69,14,Diabetes,72809,627738,11.599,3
+Female,70-74,15,Diabetes,74563,558730,13.345,2
+Female,75-79,16,Diabetes,58595,397760,14.731,2
+Female,80-84,17,Diabetes,43130,276139,15.619,3
+Female,85+,18,Diabetes,39342,293769,13.392,4
+Female,0-4,1,Heart disease,1071,658536,0.163,2
+Female,5-9,2,Heart disease,1191,706792,0.169,3
+Female,10-14,3,Heart disease,1325,705687,0.188,4
+Female,15-19,4,Heart disease,1650,650241,0.254,5
+Female,20-24,5,Heart disease,2211,711008,0.311,5
+Female,25-29,6,Heart disease,2746,814560,0.337,6
+Female,30-34,7,Heart disease,3431,878629,0.39,6
+Female,35-39,8,Heart disease,4467,868089,0.515,6
+Female,40-44,9,Heart disease,5730,773773,0.741,6
+Female,45-49,10,Heart disease,9235,772324,1.196,6
+Female,50-54,11,Heart disease,15370,763733,2.012,6
+Female,55-59,12,Heart disease,23281,730984,3.185,6
+Female,60-64,13,Heart disease,35034,705478,4.966,6
+Female,65-69,14,Heart disease,46058,627738,7.337,6
+Female,70-74,15,Heart disease,57856,558730,10.355,4
+Female,75-79,16,Heart disease,56737,397760,14.264,3
+Female,80-84,17,Heart disease,52802,276139,19.122,2
+Female,85+,18,Heart disease,73803,293769,25.123,2
+Female,0-4,1,Kidney disease,453,658536,0.069,5
+Female,5-9,2,Kidney disease,591,706792,0.084,8
+Female,10-14,3,Kidney disease,695,705687,0.098,8
+Female,15-19,4,Kidney disease,893,650241,0.137,7
+Female,20-24,5,Kidney disease,1241,711008,0.175,7
+Female,25-29,6,Kidney disease,1838,814560,0.226,7
+Female,30-34,7,Kidney disease,2430,878629,0.277,7
+Female,35-39,8,Kidney disease,3179,868089,0.366,7
+Female,40-44,9,Kidney disease,3599,773773,0.465,8
+Female,45-49,10,Kidney disease,4694,772324,0.608,8
+Female,50-54,11,Kidney disease,5999,763733,0.785,8
+Female,55-59,12,Kidney disease,7280,730984,0.996,8
+Female,60-64,13,Kidney disease,9374,705478,1.329,8
+Female,65-69,14,Kidney disease,11157,627738,1.777,9
+Female,70-74,15,Kidney disease,13548,558730,2.425,9
+Female,75-79,16,Kidney disease,13884,397760,3.491,10
+Female,80-84,17,Kidney disease,13377,276139,4.844,10
+Female,85+,18,Kidney disease,18278,293769,6.222,10
+Female,0-4,1,Lung condition,956,658536,0.145,4
+Female,5-9,2,Lung condition,792,706792,0.112,5
+Female,10-14,3,Lung condition,728,705687,0.103,7
+Female,15-19,4,Lung condition,742,650241,0.114,8
+Female,20-24,5,Lung condition,1053,711008,0.148,8
+Female,25-29,6,Lung condition,1388,814560,0.17,8
+Female,30-34,7,Lung condition,1811,878629,0.206,8
+Female,35-39,8,Lung condition,2769,868089,0.319,8
+Female,40-44,9,Lung condition,4228,773773,0.546,7
+Female,45-49,10,Lung condition,7357,772324,0.953,7
+Female,50-54,11,Lung condition,12470,763733,1.633,7
+Female,55-59,12,Lung condition,18978,730984,2.596,7
+Female,60-64,13,Lung condition,27516,705478,3.9,7
+Female,65-69,14,Lung condition,32227,627738,5.134,7
+Female,70-74,15,Lung condition,36991,558730,6.621,7
+Female,75-79,16,Lung condition,32044,397760,8.056,7
+Female,80-84,17,Lung condition,23112,276139,8.37,7
+Female,85+,18,Lung condition,22653,293769,7.711,8
+Female,0-4,1,Mental health condition,969,658536,0.147,3
+Female,5-9,2,Mental health condition,10431,706792,1.476,2
+Female,10-14,3,Mental health condition,34356,705687,4.868,2
+Female,15-19,4,Mental health condition,88048,650241,13.541,1
+Female,20-24,5,Mental health condition,128456,711008,18.067,1
+Female,25-29,6,Mental health condition,136990,814560,16.818,1
+Female,30-34,7,Mental health condition,125772,878629,14.315,1
+Female,35-39,8,Mental health condition,117790,868089,13.569,1
+Female,40-44,9,Mental health condition,105476,773773,13.631,1
+Female,45-49,10,Mental health condition,107334,772324,13.898,1
+Female,50-54,11,Mental health condition,106524,763733,13.948,1
+Female,55-59,12,Mental health condition,96615,730984,13.217,2
+Female,60-64,13,Mental health condition,88123,705478,12.491,2
+Female,65-69,14,Mental health condition,65448,627738,10.426,4
+Female,70-74,15,Mental health condition,49081,558730,8.784,6
+Female,75-79,16,Mental health condition,33646,397760,8.459,6
+Female,80-84,17,Mental health condition,25537,276139,9.248,6
+Female,85+,18,Mental health condition,38417,293769,13.077,5
+Female,0-4,1,Stroke,154,658536,0.023,9
+Female,5-9,2,Stroke,192,706792,0.027,9
+Female,10-14,3,Stroke,194,705687,0.027,9
+Female,15-19,4,Stroke,261,650241,0.04,9
+Female,20-24,5,Stroke,454,711008,0.064,9
+Female,25-29,6,Stroke,688,814560,0.084,9
+Female,30-34,7,Stroke,1030,878629,0.117,9
+Female,35-39,8,Stroke,1626,868089,0.187,9
+Female,40-44,9,Stroke,2303,773773,0.298,9
+Female,45-49,10,Stroke,3769,772324,0.488,9
+Female,50-54,11,Stroke,5437,763733,0.712,9
+Female,55-59,12,Stroke,6918,730984,0.946,9
+Female,60-64,13,Stroke,9342,705478,1.324,9
+Female,65-69,14,Stroke,11233,627738,1.789,8
+Female,70-74,15,Stroke,14194,558730,2.54,8
+Female,75-79,16,Stroke,14708,397760,3.698,8
+Female,80-84,17,Stroke,14266,276139,5.166,9
+Female,85+,18,Stroke,20538,293769,6.991,9
+Persons,0-4,1,Arthritis,559,1355234,0.041,8
+Persons,5-9,2,Arthritis,1184,1453255,0.081,8
+Persons,10-14,3,Arthritis,2267,1451418,0.156,5
+Persons,15-19,4,Arthritis,4244,1335308,0.318,4
+Persons,20-24,5,Arthritis,10277,1441864,0.713,3
+Persons,25-29,6,Arthritis,18816,1615457,1.165,3
+Persons,30-34,7,Arthritis,28810,1699363,1.695,3
+Persons,35-39,8,Arthritis,43327,1689416,2.565,3
+Persons,40-44,9,Arthritis,61324,1514485,4.049,3
+Persons,45-49,10,Arthritis,95345,1501726,6.349,3
+Persons,50-54,11,Arthritis,143914,1479632,9.726,2
+Persons,55-59,12,Arthritis,199847,1419880,14.075,1
+Persons,60-64,13,Arthritis,263985,1360533,19.403,1
+Persons,65-69,14,Arthritis,297303,1208005,24.611,1
+Persons,70-74,15,Arthritis,323489,1080441,29.94,1
+Persons,75-79,16,Arthritis,262836,761366,34.522,1
+Persons,80-84,17,Arthritis,193321,507658,38.081,1
+Persons,85+,18,Arthritis,199553,481488,41.445,1
+Persons,0-4,1,Asthma,40798,1355234,3.01,1
+Persons,5-9,2,Asthma,116350,1453255,8.006,1
+Persons,10-14,3,Asthma,137055,1451418,9.443,1
+Persons,15-19,4,Asthma,121959,1335308,9.133,2
+Persons,20-24,5,Asthma,133826,1441864,9.281,2
+Persons,25-29,6,Asthma,153337,1615457,9.492,2
+Persons,30-34,7,Asthma,156372,1699363,9.202,2
+Persons,35-39,8,Asthma,158908,1689416,9.406,2
+Persons,40-44,9,Asthma,144032,1514485,9.51,2
+Persons,45-49,10,Asthma,140711,1501726,9.37,2
+Persons,50-54,11,Asthma,131566,1479632,8.892,3
+Persons,55-59,12,Asthma,125983,1419880,8.873,3
+Persons,60-64,13,Asthma,125501,1360533,9.224,4
+Persons,65-69,14,Asthma,116259,1208005,9.624,4
+Persons,70-74,15,Asthma,103738,1080441,9.601,5
+Persons,75-79,16,Asthma,73342,761366,9.633,5
+Persons,80-84,17,Asthma,47463,507658,9.349,5
+Persons,85+,18,Asthma,40827,481488,8.479,8
+Persons,0-4,1,Cancer,714,1355234,0.053,6
+Persons,5-9,2,Cancer,1626,1453255,0.112,6
+Persons,10-14,3,Cancer,1929,1451418,0.133,6
+Persons,15-19,4,Cancer,2308,1335308,0.173,6
+Persons,20-24,5,Cancer,3503,1441864,0.243,6
+Persons,25-29,6,Cancer,5525,1615457,0.342,6
+Persons,30-34,7,Cancer,9204,1699363,0.542,5
+Persons,35-39,8,Cancer,14598,1689416,0.864,5
+Persons,40-44,9,Cancer,19455,1514485,1.285,5
+Persons,45-49,10,Cancer,30855,1501726,2.055,5
+Persons,50-54,11,Cancer,45911,1479632,3.103,5
+Persons,55-59,12,Cancer,63596,1419880,4.479,6
+Persons,60-64,13,Cancer,85761,1360533,6.303,6
+Persons,65-69,14,Cancer,103248,1208005,8.547,6
+Persons,70-74,15,Cancer,118787,1080441,10.994,4
+Persons,75-79,16,Cancer,97289,761366,12.778,4
+Persons,80-84,17,Cancer,67559,507658,13.308,4
+Persons,85+,18,Cancer,60294,481488,12.522,5
+Persons,0-4,1,Dementia,92,1355234,0.007,10
+Persons,5-9,2,Dementia,107,1453255,0.007,10
+Persons,10-14,3,Dementia,105,1451418,0.007,10
+Persons,15-19,4,Dementia,146,1335308,0.011,10
+Persons,20-24,5,Dementia,262,1441864,0.018,10
+Persons,25-29,6,Dementia,285,1615457,0.018,10
+Persons,30-34,7,Dementia,331,1699363,0.019,10
+Persons,35-39,8,Dementia,420,1689416,0.025,10
+Persons,40-44,9,Dementia,539,1514485,0.036,10
+Persons,45-49,10,Dementia,915,1501726,0.061,10
+Persons,50-54,11,Dementia,1566,1479632,0.106,10
+Persons,55-59,12,Dementia,2825,1419880,0.199,10
+Persons,60-64,13,Dementia,4892,1360533,0.36,10
+Persons,65-69,14,Dementia,8584,1208005,0.711,10
+Persons,70-74,15,Dementia,17373,1080441,1.608,10
+Persons,75-79,16,Dementia,28204,761366,3.704,10
+Persons,80-84,17,Dementia,40056,507658,7.89,8
+Persons,85+,18,Dementia,82471,481488,17.128,3
+Persons,0-4,1,Diabetes,570,1355234,0.042,7
+Persons,5-9,2,Diabetes,2088,1453255,0.144,4
+Persons,10-14,3,Diabetes,4670,1451418,0.322,3
+Persons,15-19,4,Diabetes,6785,1335308,0.508,3
+Persons,20-24,5,Diabetes,9472,1441864,0.657,4
+Persons,25-29,6,Diabetes,13648,1615457,0.845,4
+Persons,30-34,7,Diabetes,21067,1699363,1.24,4
+Persons,35-39,8,Diabetes,33001,1689416,1.953,4
+Persons,40-44,9,Diabetes,45453,1514485,3.001,4
+Persons,45-49,10,Diabetes,65821,1501726,4.383,4
+Persons,50-54,11,Diabetes,91359,1479632,6.174,4
+Persons,55-59,12,Diabetes,121506,1419880,8.557,4
+Persons,60-64,13,Diabetes,149672,1360533,11.001,3
+Persons,65-69,14,Diabetes,167336,1208005,13.852,2
+Persons,70-74,15,Diabetes,172633,1080441,15.978,2
+Persons,75-79,16,Diabetes,132359,761366,17.384,3
+Persons,80-84,17,Diabetes,89802,507658,17.689,3
+Persons,85+,18,Diabetes,71482,481488,14.846,4
+Persons,0-4,1,Heart disease,2411,1355234,0.178,2
+Persons,5-9,2,Heart disease,2671,1453255,0.184,3
+Persons,10-14,3,Heart disease,2982,1451418,0.205,4
+Persons,15-19,4,Heart disease,3538,1335308,0.265,5
+Persons,20-24,5,Heart disease,4528,1441864,0.314,5
+Persons,25-29,6,Heart disease,5614,1615457,0.348,5
+Persons,30-34,7,Heart disease,7143,1699363,0.42,6
+Persons,35-39,8,Heart disease,10375,1689416,0.614,6
+Persons,40-44,9,Heart disease,14710,1514485,0.971,6
+Persons,45-49,10,Heart disease,26318,1501726,1.753,6
+Persons,50-54,11,Heart disease,44957,1479632,3.038,6
+Persons,55-59,12,Heart disease,70862,1419880,4.991,5
+Persons,60-64,13,Heart disease,105109,1360533,7.726,5
+Persons,65-69,14,Heart disease,134828,1208005,11.161,3
+Persons,70-74,15,Heart disease,162669,1080441,15.056,3
+Persons,75-79,16,Heart disease,146594,761366,19.254,2
+Persons,80-84,17,Heart disease,118922,507658,23.426,2
+Persons,85+,18,Heart disease,134859,481488,28.009,2
+Persons,0-4,1,Kidney disease,1285,1355234,0.095,5
+Persons,5-9,2,Kidney disease,1542,1453255,0.106,7
+Persons,10-14,3,Kidney disease,1722,1451418,0.119,7
+Persons,15-19,4,Kidney disease,1904,1335308,0.143,7
+Persons,20-24,5,Kidney disease,2483,1441864,0.172,7
+Persons,25-29,6,Kidney disease,3429,1615457,0.212,7
+Persons,30-34,7,Kidney disease,4496,1699363,0.265,7
+Persons,35-39,8,Kidney disease,5992,1689416,0.355,7
+Persons,40-44,9,Kidney disease,6987,1514485,0.461,8
+Persons,45-49,10,Kidney disease,9397,1501726,0.626,8
+Persons,50-54,11,Kidney disease,12156,1479632,0.822,8
+Persons,55-59,12,Kidney disease,15511,1419880,1.092,9
+Persons,60-64,13,Kidney disease,20369,1360533,1.497,9
+Persons,65-69,14,Kidney disease,24919,1208005,2.063,9
+Persons,70-74,15,Kidney disease,30376,1080441,2.811,9
+Persons,75-79,16,Kidney disease,30115,761366,3.955,9
+Persons,80-84,17,Kidney disease,26800,507658,5.279,10
+Persons,85+,18,Kidney disease,32284,481488,6.705,10
+Persons,0-4,1,Lung condition,2276,1355234,0.168,4
+Persons,5-9,2,Lung condition,1870,1453255,0.129,5
+Persons,10-14,3,Lung condition,1597,1451418,0.11,8
+Persons,15-19,4,Lung condition,1636,1335308,0.123,8
+Persons,20-24,5,Lung condition,2280,1441864,0.158,8
+Persons,25-29,6,Lung condition,2917,1615457,0.181,8
+Persons,30-34,7,Lung condition,3765,1699363,0.222,8
+Persons,35-39,8,Lung condition,5469,1689416,0.324,8
+Persons,40-44,9,Lung condition,8172,1514485,0.54,7
+Persons,45-49,10,Lung condition,13541,1501726,0.902,7
+Persons,50-54,11,Lung condition,22737,1479632,1.537,7
+Persons,55-59,12,Lung condition,35562,1419880,2.505,7
+Persons,60-64,13,Lung condition,52123,1360533,3.831,7
+Persons,65-69,14,Lung condition,62529,1208005,5.176,7
+Persons,70-74,15,Lung condition,72763,1080441,6.735,7
+Persons,75-79,16,Lung condition,64188,761366,8.431,6
+Persons,80-84,17,Lung condition,45731,507658,9.008,6
+Persons,85+,18,Lung condition,41952,481488,8.713,7
+Persons,0-4,1,Mental health condition,2415,1355234,0.178,3
+Persons,5-9,2,Mental health condition,27207,1453255,1.872,2
+Persons,10-14,3,Mental health condition,68917,1451418,4.748,2
+Persons,15-19,4,Mental health condition,137183,1335308,10.274,1
+Persons,20-24,5,Mental health condition,193865,1441864,13.445,1
+Persons,25-29,6,Mental health condition,211004,1615457,13.062,1
+Persons,30-34,7,Mental health condition,198180,1699363,11.662,1
+Persons,35-39,8,Mental health condition,190700,1689416,11.288,1
+Persons,40-44,9,Mental health condition,175248,1514485,11.571,1
+Persons,45-49,10,Mental health condition,180351,1501726,12.01,1
+Persons,50-54,11,Mental health condition,178442,1479632,12.06,1
+Persons,55-59,12,Mental health condition,163582,1419880,11.521,2
+Persons,60-64,13,Mental health condition,149782,1360533,11.009,2
+Persons,65-69,14,Mental health condition,112487,1208005,9.312,5
+Persons,70-74,15,Mental health condition,89093,1080441,8.246,6
+Persons,75-79,16,Mental health condition,59013,761366,7.751,7
+Persons,80-84,17,Mental health condition,40298,507658,7.938,7
+Persons,85+,18,Mental health condition,53776,481488,11.169,6
+Persons,0-4,1,Stroke,363,1355234,0.027,9
+Persons,5-9,2,Stroke,465,1453255,0.032,9
+Persons,10-14,3,Stroke,479,1451418,0.033,9
+Persons,15-19,4,Stroke,583,1335308,0.044,9
+Persons,20-24,5,Stroke,896,1441864,0.062,9
+Persons,25-29,6,Stroke,1291,1615457,0.08,9
+Persons,30-34,7,Stroke,1914,1699363,0.113,9
+Persons,35-39,8,Stroke,3020,1689416,0.179,9
+Persons,40-44,9,Stroke,4358,1514485,0.288,9
+Persons,45-49,10,Stroke,7370,1501726,0.491,9
+Persons,50-54,11,Stroke,11127,1479632,0.752,9
+Persons,55-59,12,Stroke,15845,1419880,1.116,8
+Persons,60-64,13,Stroke,21967,1360533,1.615,8
+Persons,65-69,14,Stroke,27682,1208005,2.292,8
+Persons,70-74,15,Stroke,35009,1080441,3.24,8
+Persons,75-79,16,Stroke,34732,761366,4.562,8
+Persons,80-84,17,Stroke,30770,507658,6.061,9
+Persons,85+,18,Stroke,36755,481488,7.634,9

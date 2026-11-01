@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Australians are living longer, but are they living well?</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+</head>
+<body>
+
+  <header class="header-container">
+    <span class="kicker">Australian Health & Longevity</span>
+    <h1>We live longer, but are we living well?</h1>
+    <p class="subtitle">An analysis of health expectancy, long-term condition accumulation, and demographic divergence over two decades.</p>
+  </header>
+
+
+
+  <main class="story-container">
+
+    <section class="intro-card">
+    <div class="intro-content">
+        <h2>The Longevity Paradox</h2>
+        <p class="lead">
+        Over the past two decades, advances in public health and medicine have consistently pushed the boundaries of human lifespan. Australians are living longer than ever before, yet a crucial question remains: <strong>are those added years lived in good health?</strong>
+        </p>
+        <p>
+        While average life expectancy continues to climb, healthy life expectancy - the span lived free from chronic disease or debilitating illness - has not kept pace. The result is an expanding gap in later life marked by chronic disease burden, multimorbidity, and notable divergence between women and men.
+        </p>
+    </div>
+    </section>
+
+    <section class="story">
+      <div class="story-text">
+        <h2>Australians are living longer</h2>
+        <p>A baby born in Australia in 2021 can expect to live about 83 years - <strong>3.4 years longer</strong> than in 2000.</p>
+        <p>However, <strong>healthy life expectancy</strong> rose by only 2.5 years. The resulting gap? The number of years lived in poorer health-has expanded to 12.5 years, represented by the warm coral band.</p>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="num">+3.4 years</div>
+            <div class="label">Total life expectancy gained since 2000</div>
+          </div>
+          <div class="stat">
+            <div class="num">+2.5 years</div>
+            <div class="label">Healthy life expectancy gained since 2000</div>
+          </div>
+          <div class="stat warn">
+            <div class="num">12.5 years</div>
+            <div class="label">Years expected in poorer health (2021)</div>
+          </div>
+        </div>
+
+        <p>Women live longer than men (84.9 vs 81.3 years) but spend more time in poorer health (13.8 vs 11.2 years).</p>
+
+        <p class="how"><strong>How to read:</strong> The sage area represents years in good health; the coral band above it illustrates time lived in poorer health. Use the dropdown to filter by sex.</p>
+      </div>
+
+      <div class="story-chart">
+        <div id="chart1"></div>
+        <p class="source">Source: World Health Organization, Global Health Estimates.</p>
+      </div>
+    </section>
+
+    <section class="story reverse">
+      <div class="story-text">
+        <h2>Conditions pile up with age</h2>
+        <p>Representing 100 Australians across life stages, each dot is one person. The intensity of colour luminance indicates condition burden, from none to three or more.</p>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="num">9 in 100</div>
+            <div class="label">Children (aged 0–14) reporting a condition</div>
+          </div>
+          <div class="stat">
+            <div class="num">36 in 100</div>
+            <div class="label">Adults aged 45–64 reporting a condition</div>
+          </div>
+          <div class="stat warn">
+            <div class="num">78 in 100</div>
+            <div class="label">Aged 85+ reporting conditions (44 with 2+)</div>
+          </div>
+        </div>
+
+        <p>Among adults aged 45–64, women are slightly more likely than men to report at least one chronic condition (38% vs 34%).</p>
+
+        <p class="how"><strong>How to read:</strong> Each grid contains 100 individuals for that age cohort. Notice how deep-coral dots expand rapidly from mid-life onward.</p>
+      </div>
+
+      <div class="story-chart">
+        <div id="chart2"></div>
+        <p class="source">Source: Australian Bureau of Statistics, 2021 Census of Population and Housing.</p>
+      </div>
+    </section>
+
+    <section class="story">
+      <div class="story-text">
+        <h2>What people live with changes through life</h2>
+        <p>Prevalence shifts dramatically by life stage. <strong>Asthma</strong> leads in childhood, <strong>mental health conditions</strong> dominate through early adulthood to age 54, and <strong>arthritis</strong> takes the top spot from age 55 onward.</p>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="num">Ages 15–54</div>
+            <div class="label">Mental health conditions rank #1</div>
+          </div>
+          <div class="stat">
+            <div class="num">Age 55+</div>
+            <div class="label">Arthritis remains the most prevalent condition</div>
+          </div>
+          <div class="stat warn">
+            <div class="num">10th → 3rd</div>
+            <div class="label">Dementia surge between ages 75–79 and 85+</div>
+          </div>
+        </div>
+
+        <p class="how"><strong>How to read:</strong> Each line traces one condition's rank from left (childhood) to right (older age). Hover over any point to highlight that condition.</p>
+      </div>
+
+      <div class="story-chart">
+        <div id="chart3"></div>
+        <p class="source">Source: Australian Bureau of Statistics, 2021 Census of Population and Housing.</p>
+      </div>
+    </section>
+
+    <section class="story reverse">
+      <div class="story-text">
+        <h2>Women and men live with different conditions</h2>
+        <p>Women report significantly higher rates of <strong>arthritis</strong>, <strong>mental health conditions</strong>, and <strong>asthma</strong> across virtually every age bracket.</p>
+        <p>Conversely, men experience substantially higher rates of <strong>heart disease</strong>, with middle-aged men recording more than double the rate of women.</p>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="num">2.0×</div>
+            <div class="label">Women vs men aged 20–24 reporting mental health conditions</div>
+          </div>
+          <div class="stat">
+            <div class="num">2.0×</div>
+            <div class="label">Men vs women aged 55–64 reporting heart disease</div>
+          </div>
+          <div class="stat warn">
+            <div class="num">100%</div>
+            <div class="label">Age brackets where arthritis is more common in women</div>
+          </div>
+        </div>
+
+        <p class="how"><strong>How to read:</strong> Luminance encodes condition ratio. Darker tiles indicate greater prevalence among women, while pale tiles indicate higher prevalence among men.</p>
+      </div>
+
+      <div class="story-chart">
+        <div id="chart4"></div>
+        <p class="source">Source: Australian Bureau of Statistics, 2021 Census of Population and Housing.</p>
+      </div>
+    </section>
+  <section class="story">
+      <div class="story-text">
+        <h2>Where you live shapes what you live with</h2>
+
+        <p>Health conditions do not distribute evenly across Australia. Variations in population age profiles, regional lifestyle factors, and healthcare access produce stark state-by-state differences.</p>
+
+        <p><strong>Tasmania</strong> faces the highest relative health burden nationwide, exceeding national benchmarks across all ten monitored conditions, largely driven by an older median demographic. Conversely, the <strong>Northern Territory</strong> records lower rates across most chronic conditions due to its younger population, although <strong>kidney disease</strong> remains elevated.</p>
+
+        <div class="stats">
+          <div class="stat warn">
+            <div class="num">+4.04 pp</div>
+            <div class="label">Tasmania: Arthritis rate above national baseline</div>
+          </div>
+          <div class="stat">
+            <div class="num">+1.10 pp</div>
+            <div class="label">ACT: Mental health conditions above national rate</div>
+          </div>
+          <div class="stat">
+            <div class="num">+0.12 pp</div>
+            <div class="label">NT: Kidney disease elevation despite youthful profile</div>
+          </div>
+        </div>
+
+        <p>In the <strong>Australian Capital Territory</strong>, higher socioeconomic indicators coincide with lower rates of physical aging conditions (arthritis, heart disease, diabetes), yet self-reported mental health conditions rank well above average.</p>
+
+      </div>
+
+      <div class="story-chart">
+        <div id="chart5"></div>
+        <p class="source">Source: Australian Bureau of Statistics, 2021 Census of Population and Housing (Health data summary, Table 2).</p>
+      </div>
+    </section>
+
+    <section class="story reverse">
+        <div class="story-text">
+            <h2>Population volume meets local health burden</h2>
+
+            <p>A high prevalence percentage does not always tell the whole healthcare story: resource allocation requires understanding <strong>both rates and raw caseloads</strong>.</p>
+
+            <p>Looking at total numbers, <strong>New South Wales</strong> and <strong>Victoria</strong> account for over 55% of all diagnosed Australians across every major condition due to their massive populations, even though their baseline rates often hover close to the national average.</p>
+
+            <p>In contrast, <strong>Tasmania</strong> records the nation's steepest chronic condition rates (40.6% report at least one condition vs 34.5% nationally), yet its total patient volume remains modest. Conversely, the <strong>Northern Territory</strong> has lower overall volume and rates for lifestyle aging diseases, but faces severe localized concentrations in conditions like kidney disease.</p>
+
+            <div class="stats">
+            <div class="stat">
+                <div class="num">2.49M</div>
+                <div class="label">People in NSW living with a long-term condition</div>
+            </div>
+            <div class="stat warn">
+                <div class="num">+6.11 pp</div>
+                <div class="label">Tasmania rate deviation for any condition (40.6%)</div>
+            </div>
+            <div class="stat">
+                <div class="num">88.5%</div>
+                <div class="label">East-coast share (NSW, VIC, QLD) of total chronic patient volume</div>
+            </div>
+            </div>
+
+            <p class="how"><strong>How to read it:</strong> Circle size represents the absolute number of people diagnosed (larger circle = more people). Circle colour shows prevalence relative to the national average (coral = above average; teal = below average). Use the menu to filter conditions.</p>
+        </div>
+
+        <div class="story-chart">
+            <div id="chart6"></div>
+            <p class="source">Source: Australian Bureau of Statistics, 2021 Census of Population and Housing (Health data summary, Table 2).</p>
+        </div>
+        </section>
+
+    <section class="story">
+    <div class="story-text">
+        <h2>Mapping the global flow of chronic conditions</h2>
+
+        <p>Australia’s chronic health profile reflects distinct global migration streams. This Sankey diagram illustrates how diagnosis volume flows from world birth regions (left) into ten major chronic health conditions (right).</p>
+
+        <p>Migrants from <strong>Southern and Eastern Europe</strong> and <strong>North-West Europe</strong> account for large, concentrated flows into <em>arthritis</em>, <em>heart disease</em>, and <em>type 2 diabetes</em>. Because these cohorts largely arrived during post-war migration waves, they represent an older demographic facing pronounced late-life morbidity.</p>
+
+        <p>Conversely, flows from <strong>South-East, North-East, and Southern/Central Asia</strong> remain comparatively thin despite large total populations in Australia, driven by younger average age profiles and immigration health requirements.</p>
+
+        <div class="stats">
+        <div class="stat warn">
+            <div class="num">358k+</div>
+            <div class="label">Diagnosed arthritis cases originating from European-born cohorts</div>
+        </div>
+        <div class="stat">
+            <div class="num">Healthy Immigrant Effect</div>
+            <div class="label">Recent Asian migration streams demonstrate lower chronic illness volume</div>
+        </div>
+        </div>
+
+        <p class="how"><strong>How to read:</strong> The thickness of each flowing band represents the total number of people diagnosed in Australia. Hover over any ribbon or node to highlight its paths. Use the radio toggle above to switch between viewing all residents or overseas-born cohorts exclusively.</p>
+    </div>
+
+    <div class="story-chart">
+        <div id="chart7"></div>
+        <p class="source">Source: Australian Bureau of Statistics, 2021 Census of Population and Housing (Health data summary, Table 4).</p>
+    </div>
+    </section>
+
+    <section class="story reverse">
+    <div class="story-text">
+        <h2>From diagnosis to disability: the daily care divide</h2>
+
+        <p>Living longer with a health condition is only half the picture. The fundamental measure of quality of life is whether illness strips away everyday independence. In the Census, a "need for assistance" refers to individuals requiring daily help with core survival activities: self-care, mobility, or communication.</p>
+
+        <p>This Sankey diagram maps how chronic conditions (left) divide into daily independence (sage) versus profound disability (warm coral). Over <strong>2.24 million chronic cases</strong> in Australia require core daily assistance.</p>
+
+        <p>While conditions like asthma and arthritis affect millions of people, their relative disability burden differs dramatically. For <strong>dementia</strong>, almost the entire diagnosis flow enters the care system (<strong>85.0%</strong>), followed closely by <strong>stroke (46.9%)</strong>. In absolute caseload, however, <strong>arthritis</strong> (464,800 people) and <strong>mental health conditions</strong> (429,500 people) generate the highest bulk volume of Australians needing core daily support.</p>
+
+        <div class="stats">
+        <div class="stat warn">
+            <div class="num">85.0%</div>
+            <div class="label">Dementia cases requiring core activity assistance</div>
+        </div>
+        <div class="stat warn">
+            <div class="num">464.8k</div>
+            <div class="label">Australians with arthritis requiring daily assistance</div>
+        </div>
+        <div class="stat">
+            <div class="num">0.9%</div>
+            <div class="label">Baseline assistance need for people with no chronic illness</div>
+        </div>
+        </div>
+
+        <p class="how"><strong>How to read:</strong> Flow ribbon width indicates total patient volume. Coral ribbons highlight the flow into daily assistance need; sage ribbons represent individuals living independently. Hover over any node or ribbon to trace its pathways, and use the radio buttons to compare female and male cohorts.</p>
+    </div>
+
+    <div class="story-chart">
+        <div id="chart8"></div>
+        <p class="source">Source: Australian Bureau of Statistics, 2021 Census of Population and Housing (Health data summary, Table 3).</p>
+    </div>
+    </section>
+
+    <section class="story">
+    <div class="story-text">
+        <h2>Did our shift away from smoking come with a trade-off?</h2>
+
+        <p>Over the past two decades, Australia achieved one of the world's most successful tobacco control records. Age-standardised smoking among people aged 15 and over plunged from <strong>24.5% in 2000 to 13.1% in 2022</strong>, cutting premature deaths from lung cancer and cardiovascular disease.</p>
+
+        <p>However, during the exact same 22-year window, adult obesity expanded steadily. In 2000, fewer than one in five Australian adults (19.5%) were living with obesity; by 2022, that number had surged to <strong>30.2%</strong>.</p>
+
+        <p>The two trajectories crossed around <strong>2004</strong>. Today, metabolic complications linked to high body mass - 
+            including type 2 diabetes, osteoarthritis, and heart disease - have replaced smoking as the primary chronic illness burden stretching Australia's healthspan gap.</p>
+
+        <div class="stats">
+        <div class="stat">
+            <div class="num">-11.4 pp</div>
+            <div class="label">Reduction in daily tobacco smoking (2000–2022)</div>
+        </div>
+        <div class="stat warn">
+            <div class="num">+10.7 pp</div>
+            <div class="label">Increase in adult obesity prevalence (to 30.2%)</div>
+        </div>
+        <div class="stat">
+            <div class="num">~2004</div>
+            <div class="label">Crossover year when obesity officially overtook smoking</div>
+        </div>
+        </div>
+
+        <p class="how"><strong>How to read:</strong> The teal line tracks the decline in daily tobacco use; the coral line tracks rising adult obesity. The dashed vertical marker highlights the crossover point (~2008).</p>
+    </div>
+
+    <div class="story-chart">
+        <div id="chart9"></div>
+        <p class="source">Source: World Health Organization (WHO), Global Health Observatory (GHO) Data Repository.</p>
+    </div>
+    </section>
+
+    <section class="story">
+    <div class="story-text">
+        <h2>The age structure behind Australia's health story</h2>
+
+        <p>This chart shows how many Australians are in each five-year age group,
+        with women on the left and men on the right. Use the menu to switch
+        between 2023 and the projection for 2050.</p>
+
+        <div class="stats">
+        <div class="stat">
+            <div class="num">1.9 million</div>
+            <div class="label">people in each of the largest age groups (30-34 and 35-39) in 2023</div>
+        </div>
+        <div class="stat warn">
+            <div class="num">568,000 → 1.6 million</div>
+            <div class="label">people aged 85 and over, 2023 to 2050</div>
+        </div>
+        </div>
+
+        <p>By 2050 the shape changes: the share of people aged 65 and over is
+        projected to rise from 17% to 24%. As the earlier charts show,
+        arthritis, heart disease and dementia become much more common with age,
+        so more older Australians means more people living with them and needing
+        help with daily life.</p>
+
+        <p class="how"><strong>How to read it:</strong> each row is an age group.
+        Women are on the left (orange) and men on the right (teal). A longer bar
+        means more people in that group.</p>
+    </div>
+
+    <div class="story-chart">
+        <div id="chart10"></div>
+        <p class="source">Source: United Nations, World Population Prospects 2022,
+        via the World Health Organization, "Australia: Health at a glance"
+        (data.who.int/countries/036). Age-group values are estimated from the
+        WHO chart and rounded to the nearest 1,000.</p>
+    </div>
+    </section>
+
+    <section class="conclusion">
+      <div class="conclusion-inner">
+        <span class="kicker">Conclusion</span>
+        <h2>So, are we living well?</h2>
+
+        <p class="lead">Australians are living longer, but not always better. A baby born
+          in 2021 can expect about 83 years of life, yet around 12.5 of those years are
+          expected to be lived in poorer health, and that gap has grown since 2000.</p>
+
+        <div class="takeaways">
+
+          <article class="takeaway">
+            <div class="takeaway-label">The gap</div>
+            <h3>More years, but not all of them healthy</h3>
+            <div class="big">12.5 years</div>
+            <p>Life expectancy rose 3.4 years since 2000, but healthy life expectancy rose
+              only 2.5. The time spent in poorer health grew from 11.6 to 12.5 years. Women
+              live longer than men, but spend more of that time unwell (13.8 vs 11.2 years).</p>
+          </article>
+
+          <article class="takeaway">
+            <div class="takeaway-label">Age</div>
+            <h3>Conditions build up as we age</h3>
+            <div class="big">9 → 78 in 100</div>
+            <p>About 9 in 100 children report one of the ten conditions the Census asks
+              about, compared with 78 in 100 people aged 85 and over. What leads also
+              changes: asthma in childhood, mental health conditions from 15 to 54,
+              arthritis from 55, and dementia jumps from 10th place to 3rd at 85 and over.</p>
+          </article>
+
+          <article class="takeaway">
+            <div class="takeaway-label">Who and where</div>
+            <h3>The picture differs by sex and by place</h3>
+            <div class="big">40.6% vs 34.5%</div>
+            <p>Women report more arthritis at every age, and twice the rate of mental health
+              conditions at ages 20 to 24. Men have more than twice the rate of heart disease
+              at ages 55 to 64. Tasmania has the highest share of people with a condition
+              (40.6%, against 34.5% nationally). These state rates are not adjusted for age,
+              so states with older populations look sicker.</p>
+          </article>
+
+          <article class="takeaway">
+            <div class="takeaway-label">Daily life</div>
+            <h3>For some conditions, independence is at stake</h3>
+            <div class="big">85%</div>
+            <p>85% of people with dementia and 47% of people with stroke need help with
+              daily activities, compared with under 1% of people with no long-term condition.
+              Arthritis and mental health conditions are so common that they account for the
+              largest numbers needing help (about 465,000 and 430,000 people).</p>
+          </article>
+
+          <article class="takeaway">
+            <div class="takeaway-label">The road ahead</div>
+            <h3>An older Australia is on the way</h3>
+            <div class="big">17% → 24%</div>
+            <p>People aged 65 and over are projected to grow from 17% to 24% of the
+              population by 2050, and those aged 85 and over from 568,000 to about
+              1.6 million. Meanwhile, smoking fell from 24.5% to 13.1% of adults, but
+              adult obesity rose from 19.5% to 30.2%.</p>
+          </article>
+
+        </div>
+
+        <div class="closing">
+          <h3>Why it matters</h3>
+          <p>Taken together, the charts point the same way. Living longer is a real
+            achievement, but the extra years are not all healthy ones. The conditions
+            that limit daily life build up most in the oldest age groups, which are the
+            fastest-growing part of the population. Judging Australia's health by life
+            expectancy alone hides this, so planning for care and support needs to focus
+            on keeping people well for longer, not only on helping them live longer.</p>
+          <p class="final">The question is not just how long we live, but how well.</p>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <script src="js/vega_lite_vis.js"></script>
+</body>
+</html>

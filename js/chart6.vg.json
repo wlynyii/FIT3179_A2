@@ -1,0 +1,191 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Geographic Volume and Burden of Chronic Health Conditions",
+    "subtitle": [
+      "Circle size represents the total number of people affected; colour indicates deviation from the national rate (2021 Census).",
+      "Choose a condition from the menu to inspect state and territory disparities."
+    ],
+    "anchor": "start",
+    "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "fontSize": 16,
+    "fontWeight": 700,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#64748B",
+    "offset": 14
+  },
+  "width": "container",
+  "height": 430,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "padding": {
+    "left": 15,
+    "right": 15,
+    "top": 10,
+    "bottom": 25
+  },
+  "params": [
+    {
+      "name": "selected_condition",
+      "value": "Arthritis",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Any long-term condition",
+          "Arthritis",
+          "Asthma",
+          "Cancer",
+          "Dementia",
+          "Diabetes",
+          "Heart disease",
+          "Kidney disease",
+          "Lung condition",
+          "Mental health condition",
+          "Stroke"
+        ],
+        "name": "Condition: "
+      }
+    }
+  ],
+  "projection": {
+    "type": "equirectangular",
+    "center": [133.8, -28.5],
+    "scale": 440
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "js/states.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "STE_2021_AUST_GDA2020"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#EEF2F6",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.2
+      }
+    },
+    {
+      "data": {
+        "url": "data/chart06_state_symbol_map.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.condition === selected_condition"
+        },
+        {
+          "calculate": "(datum.diff_vs_national_pp > 0 ? '+' : '') + format(datum.diff_vs_national_pp, '.2f') + ' pp'",
+          "as": "diff_label"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "opacity": 0.82,
+        "stroke": "#2B343B",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "count",
+          "type": "quantitative",
+          "title": "People Affected",
+          "scale": {
+            "type": "sqrt",
+            "range": [70, 950]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "titleFontSize": 11,
+            "titleColor": "#64748B",
+            "labelFontSize": 10,
+            "labelColor": "#64748B",
+            "format": "~s",
+            "offset": 12,
+            "rowPadding": 10
+          }
+        },
+        "color": {
+          "field": "diff_vs_national_pp",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-5, 0, 5],
+            "range": ["#0A4D52", "#F8FAFC", "#E06D53"],
+            "clamp": true
+          },
+          "legend": {
+            "title": "Rate vs. National Baseline (pp)",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 280,
+            "gradientThickness": 10,
+            "titleFontSize": 11,
+            "titleColor": "#64748B",
+            "labelFontSize": 10,
+            "labelColor": "#64748B",
+            "values": [-4, -2, 0, 2, 4],
+            "labelExpr": "datum.value == 0 ? 'National Avg' : (datum.value > 0 ? '+' : '') + datum.value + ' pp'",
+            "offset": 12
+          }
+        },
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State / Territory"},
+          {"field": "condition", "type": "nominal", "title": "Condition"},
+          {"field": "count", "type": "quantitative", "title": "People Diagnosed", "format": ","},
+          {"field": "rate_pct", "type": "quantitative", "title": "Prevalence Rate (%)", "format": ".2f"},
+          {"field": "national_rate_pct", "type": "quantitative", "title": "National Baseline (%)", "format": ".2f"},
+          {"field": "diff_label", "type": "nominal", "title": "Difference vs. National"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/chart06_state_symbol_map.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.condition === selected_condition"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#1E293B",
+        "dy": -13
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "state_short",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "view": {"stroke": null}
+  }
+}

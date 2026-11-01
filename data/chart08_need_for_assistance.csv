@@ -1,0 +1,67 @@
+sex,condition,need_for_assistance,count,total_stated,pct_of_condition,is_comparator
+Male,Arthritis,Has need for assistance,154778,781718,19.8,0
+Male,Arthritis,No need for assistance,626940,781718,80.2,0
+Male,Asthma,Has need for assistance,80262,902442,8.89,0
+Male,Asthma,No need for assistance,822180,902442,91.11,0
+Male,Cancer,Has need for assistance,71390,346463,20.61,0
+Male,Cancer,No need for assistance,275073,346463,79.39,0
+Male,Dementia,Has need for assistance,61589,75536,81.54,0
+Male,Dementia,No need for assistance,13947,75536,18.46,0
+Male,Diabetes,Has need for assistance,119931,647027,18.54,0
+Male,Diabetes,No need for assistance,527096,647027,81.46,0
+Male,Heart disease,Has need for assistance,130359,598491,21.78,0
+Male,Heart disease,No need for assistance,468132,598491,78.22,0
+Male,Kidney disease,Has need for assistance,38783,117806,32.92,0
+Male,Kidney disease,No need for assistance,79023,117806,67.08,0
+Male,Lung condition,Has need for assistance,65843,210726,31.25,0
+Male,Lung condition,No need for assistance,144883,210726,68.75,0
+Male,Mental health condition,Has need for assistance,196421,864751,22.71,0
+Male,Mental health condition,No need for assistance,668330,864751,77.29,0
+Male,Stroke,Has need for assistance,54758,125469,43.64,0
+Male,Stroke,No need for assistance,70711,125469,56.36,0
+Male,No long-term health condition,Has need for assistance,77932,7698933,1.01,1
+Male,No long-term health condition,No need for assistance,7621001,7698933,98.99,1
+Female,Arthritis,Has need for assistance,310050,1345496,23.04,0
+Female,Arthritis,No need for assistance,1035446,1345496,76.96,0
+Female,Asthma,Has need for assistance,125606,1149279,10.93,0
+Female,Asthma,No need for assistance,1023673,1149279,89.07,0
+Female,Cancer,Has need for assistance,78681,378369,20.79,0
+Female,Cancer,No need for assistance,299688,378369,79.21,0
+Female,Dementia,Has need for assistance,93298,106652,87.48,0
+Female,Dementia,No need for assistance,13354,106652,12.52,0
+Female,Diabetes,Has need for assistance,131448,539047,24.39,0
+Female,Diabetes,No need for assistance,407599,539047,75.61,0
+Female,Heart disease,Has need for assistance,130979,388432,33.72,0
+Female,Heart disease,No need for assistance,257453,388432,66.28,0
+Female,Kidney disease,Has need for assistance,42592,110785,38.45,0
+Female,Kidney disease,No need for assistance,68193,110785,61.55,0
+Female,Lung condition,Has need for assistance,74896,224926,33.3,0
+Female,Lung condition,No need for assistance,150030,224926,66.7,0
+Female,Mental health condition,Has need for assistance,233132,1347603,17.3,0
+Female,Mental health condition,No need for assistance,1114471,1347603,82.7,0
+Female,Stroke,Has need for assistance,53663,105590,50.82,0
+Female,Stroke,No need for assistance,51927,105590,49.18,0
+Female,No long-term health condition,Has need for assistance,63935,7478635,0.85,1
+Female,No long-term health condition,No need for assistance,7414700,7478635,99.15,1
+Persons,Arthritis,Has need for assistance,464828,2127219,21.85,0
+Persons,Arthritis,No need for assistance,1662391,2127219,78.15,0
+Persons,Asthma,Has need for assistance,205863,2051719,10.03,0
+Persons,Asthma,No need for assistance,1845856,2051719,89.97,0
+Persons,Cancer,Has need for assistance,150070,724831,20.7,0
+Persons,Cancer,No need for assistance,574761,724831,79.3,0
+Persons,Dementia,Has need for assistance,154884,182189,85.01,0
+Persons,Dementia,No need for assistance,27305,182189,14.99,0
+Persons,Diabetes,Has need for assistance,251378,1186070,21.19,0
+Persons,Diabetes,No need for assistance,934692,1186070,78.81,0
+Persons,Heart disease,Has need for assistance,261334,986921,26.48,0
+Persons,Heart disease,No need for assistance,725587,986921,73.52,0
+Persons,Kidney disease,Has need for assistance,81380,228593,35.6,0
+Persons,Kidney disease,No need for assistance,147213,228593,64.4,0
+Persons,Lung condition,Has need for assistance,140736,435653,32.3,0
+Persons,Lung condition,No need for assistance,294917,435653,67.7,0
+Persons,Mental health condition,Has need for assistance,429554,2212355,19.42,0
+Persons,Mental health condition,No need for assistance,1782801,2212355,80.58,0
+Persons,Stroke,Has need for assistance,108419,231058,46.92,0
+Persons,Stroke,No need for assistance,122639,231058,53.08,0
+Persons,No long-term health condition,Has need for assistance,141871,15177572,0.93,1
+Persons,No long-term health condition,No need for assistance,15035701,15177572,99.07,1

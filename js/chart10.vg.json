@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Australia's Age and Sex Structure",
+    "subtitle": [
+      "Estimated population by age group and sex, Australia (2023 and projected 2050).",
+      "Left: women; right: men. Use the menu to switch year."
+    ],
+    "anchor": "start",
+    "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "fontSize": 16,
+    "fontWeight": 700,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#64748B",
+    "offset": 14
+  },
+  "width": "container",
+  "height": 380,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "padding": {"left": 10, "right": 10, "top": 10, "bottom": 15},
+  "data": {"url": "data/chart10_population_pyramid.csv"},
+  "params": [
+    {
+      "name": "selected_year",
+      "value": 2023,
+      "bind": {"input": "select", "options": [2023, 2050], "name": "Year: "}
+    }
+  ],
+  "transform": [{"filter": "datum.year == selected_year"}],
+  "encoding": {
+    "y": {
+      "field": "age_band",
+      "type": "ordinal",
+      "sort": ["85+","80-84","75-79","70-74","65-69","60-64","55-59","50-54","45-49",
+               "40-44","35-39","30-34","25-29","20-24","15-19","10-14","5-9","0-4"],
+      "axis": {
+        "title": "Age group",
+        "titleFontSize": 11,
+        "titleColor": "#64748B",
+        "labelFontSize": 10,
+        "labelColor": "#1E293B",
+        "domain": false,
+        "ticks": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "cornerRadiusEnd": 3},
+      "encoding": {
+        "x": {
+          "field": "population_signed",
+          "type": "quantitative",
+          "title": "Number of people",
+          "scale": {"domain": [-1200000, 1200000]},
+          "axis": {
+            "titleFontSize": 11,
+            "titleColor": "#64748B",
+            "labelFontSize": 10,
+            "labelColor": "#64748B",
+            "grid": true,
+            "gridColor": "#F1F5F9",
+            "labelExpr": "format(abs(datum.value), '~s')"
+          }
+        },
+        "color": {
+          "field": "sex",
+          "type": "nominal",
+          "scale": {"domain": ["Female", "Male"], "range": ["#E06D53", "#0A4D52"]},
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "title": null,
+            "labelFontSize": 11,
+            "labelColor": "#475569",
+            "symbolSize": 120,
+            "offset": 12
+          }
+        },
+        "tooltip": [
+          {"field": "year", "type": "quantitative", "title": "Year", "format": "d"},
+          {"field": "age_band", "type": "nominal", "title": "Age group"},
+          {"field": "sex", "type": "nominal", "title": "Sex"},
+          {"field": "population", "type": "quantitative", "title": "People (estimate)", "format": ","},
+          {"field": "share_of_total_pct", "type": "quantitative", "title": "Share of population (%)", "format": ".1f"}
+        ]
+      }
+    }
+  ],
+  "config": {
+    "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "view": {"stroke": null}
+  }
+}

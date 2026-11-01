@@ -1,0 +1,153 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Geographic Distribution of Chronic Health Conditions",
+    "subtitle": [
+      "Difference in prevalence compared with the national baseline (percentage points, 2021 Census).",
+      "Select a condition from the menu to compare state rates against national figures."
+    ],
+    "anchor": "start",
+    "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "fontSize": 16,
+    "fontWeight": 700,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#64748B",
+    "offset": 14
+  },
+  "width": "container",
+  "height": 450,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "padding": {"left": 30, "right": 30, "top": 20, "bottom": 50},
+  "params": [
+    {
+      "name": "selected_condition",
+      "value": "Arthritis",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Arthritis",
+          "Asthma",
+          "Cancer",
+          "Dementia",
+          "Diabetes",
+          "Heart disease",
+          "Kidney disease",
+          "Lung condition",
+          "Mental health condition",
+          "Stroke"
+        ],
+        "name": "Condition: "
+      }
+    }
+  ],
+  "projection": {
+    "type": "equirectangular",
+    "center": [133.5, -23.0],
+    "scale": 390
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/chart05_state_condition_rates.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.condition === selected_condition"
+        },
+        {
+          "lookup": "state",
+          "from": {
+            "data": {
+              "url": "js/states.topojson",
+              "format": {
+                "type": "topojson",
+                "feature": "STE_2021_AUST_GDA2020"
+              }
+            },
+            "key": "properties.STE_NAME21"
+          },
+          "as": "geo"
+        },
+        {
+          "calculate": "(datum.diff_vs_national_pp > 0 ? '+' : '') + format(datum.diff_vs_national_pp, '.2f') + ' pp'",
+          "as": "diff_label"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "shape": {
+          "field": "geo",
+          "type": "geojson"
+        },
+        "color": {
+          "field": "diff_vs_national_pp",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-4.5, 0, 4.5],
+            "range": ["#0A4D52", "#F8FAFC", "#E06D53"],
+            "clamp": true
+          },
+          "legend": {
+            "title": "Difference vs. National Rate (pp)",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 320,
+            "gradientThickness": 10,
+            "titleFontSize": 11,
+            "titleColor": "#64748B",
+            "labelFontSize": 10,
+            "labelColor": "#64748B",
+            "values": [-4, -2, 0, 2, 4],
+            "labelExpr": "datum.value == 0 ? 'National Avg' : (datum.value > 0 ? '+' : '') + datum.value + ' pp'"
+          }
+        },
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State / Territory"},
+          {"field": "condition", "type": "nominal", "title": "Condition"},
+          {"field": "rate_pct", "type": "quantitative", "title": "State Rate (%)", "format": ".2f"},
+          {"field": "national_rate_pct", "type": "quantitative", "title": "National Baseline (%)", "format": ".2f"},
+          {"field": "diff_label", "type": "nominal", "title": "Difference (pp)"},
+          {"field": "count", "type": "quantitative", "title": "People Affected", "format": ","}
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"state_short": "WA", "lon": 122.5, "lat": -25.5},
+          {"state_short": "NT", "lon": 133.5, "lat": -19.5},
+          {"state_short": "SA", "lon": 135.5, "lat": -30.0},
+          {"state_short": "QLD", "lon": 144.5, "lat": -22.5},
+          {"state_short": "NSW", "lon": 147.0, "lat": -32.5},
+          {"state_short": "VIC", "lon": 144.5, "lat": -37.0},
+          {"state_short": "TAS", "lon": 146.5, "lat": -42.0},
+          {"state_short": "ACT", "lon": 149.1, "lat": -35.3}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": 10,
+        "fontWeight": 700,
+        "color": "#1E293B",
+        "opacity": 0.8
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "state_short", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {
+    "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "view": {"stroke": null}
+  }
+}

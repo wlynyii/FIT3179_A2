@@ -1,0 +1,239 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Two Decades of Public Health: Falling Tobacco vs. Rising Obesity",
+    "subtitle": [
+      "Survey-year adult obesity prevalence (18+) compared with age-standardised daily tobacco use (15+) from 2000 to 2022 (WHO GHO).",
+      "Notice the historic crossover around 2008, when adult obesity rates officially overtook smoking."
+    ],
+    "anchor": "start",
+    "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "fontSize": 16,
+    "fontWeight": 700,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#64748B",
+    "offset": 14
+  },
+  "width": "container",
+  "height": 380,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "padding": {"left": 10, "right": 35, "top": 10, "bottom": 15},
+  "data": {
+    "url": "data/chart09_tobacco_vs_obesity.csv"
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": "Year",
+      "scale": {
+        "domain": [1998, 2024],
+        "zero": false
+      },
+      "axis": {
+        "format": "d",
+        "values": [2000, 2005, 2010, 2015, 2020, 2022],
+        "titleFontSize": 11,
+        "titleColor": "#64748B",
+        "labelFontSize": 10,
+        "labelColor": "#64748B",
+        "grid": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#CBD5E1",
+        "strokeDash": [4, 4],
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {"datum": 2004}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "text": "Crossover (~2004): Obesity overtakes tobacco",
+        "align": "left",
+        "dx": 6,
+        "dy": -80,
+        "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": 10.5,
+        "fontWeight": 600,
+        "color": "#64748B"
+      },
+      "encoding": {
+        "x": {"datum": 2004},
+        "y": {"datum": 22.5}
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#0A4D52",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "y": {
+          "field": "tobacco_use_pct",
+          "type": "quantitative",
+          "title": "Prevalence (% of population)",
+          "scale": {"domain": [10, 35], "zero": false},
+          "axis": {
+            "titleFontSize": 11,
+            "titleColor": "#64748B",
+            "labelFontSize": 10,
+            "labelColor": "#64748B",
+            "grid": true,
+            "gridColor": "#F1F5F9"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 85,
+        "color": "#0A4D52"
+      },
+      "encoding": {
+        "y": {"field": "tobacco_use_pct", "type": "quantitative"},
+        "tooltip": [
+          {"field": "year", "type": "quantitative", "title": "Year"},
+          {"field": "tobacco_use_pct", "type": "quantitative", "title": "Tobacco Use (%)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#E06D53",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "y": {"field": "adult_obesity_pct", "type": "quantitative"}
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 85,
+        "color": "#E06D53"
+      },
+      "encoding": {
+        "y": {"field": "adult_obesity_pct", "type": "quantitative"},
+        "tooltip": [
+          {"field": "year", "type": "quantitative", "title": "Year"},
+          {"field": "adult_obesity_pct", "type": "quantitative", "title": "Adult Obesity (%)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "transform": [{"filter": "datum.year === 2000"}],
+      "mark": {
+        "type": "text",
+        "text": "24.5%",
+        "align": "center",
+        "dy": -14,
+        "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#0A4D52"
+      },
+      "encoding": {
+        "y": {"field": "tobacco_use_pct", "type": "quantitative"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.year === 2022"}],
+      "mark": {
+        "type": "text",
+        "text": "13.1%",
+        "align": "center",
+        "dy": 16,
+        "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#0A4D52"
+      },
+      "encoding": {
+        "y": {"field": "tobacco_use_pct", "type": "quantitative"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.year === 2000"}],
+      "mark": {
+        "type": "text",
+        "text": "19.5%",
+        "align": "center",
+        "dy": 16,
+        "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#E06D53"
+      },
+      "encoding": {
+        "y": {"field": "adult_obesity_pct", "type": "quantitative"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.year === 2022"}],
+      "mark": {
+        "type": "text",
+        "text": "30.2%",
+        "align": "center",
+        "dy": -14,
+        "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#E06D53"
+      },
+      "encoding": {
+        "y": {"field": "adult_obesity_pct", "type": "quantitative"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.year === 2022"}],
+      "mark": {
+        "type": "text",
+        "text": "Tobacco use (15+)",
+        "align": "left",
+        "dx": 8,
+        "dy": 15,
+        "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": 10.5,
+        "fontWeight": 700,
+        "color": "#0A4D52"
+      },
+      "encoding": {
+        "y": {"field": "tobacco_use_pct", "type": "quantitative"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.year === 2022"}],
+      "mark": {
+        "type": "text",
+        "text": "Adult obesity (18+)",
+        "align": "left",
+        "dx": 8,
+        "dy": -12,
+        "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": 10.5,
+        "fontWeight": 700,
+        "color": "#E06D53"
+      },
+      "encoding": {
+        "y": {"field": "adult_obesity_pct", "type": "quantitative"}
+      }
+    }
+  ],
+  "config": {
+    "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "view": {"stroke": null}
+  }
+}

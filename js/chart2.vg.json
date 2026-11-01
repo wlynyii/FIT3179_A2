@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Condition Burden per 100 People by Age Cohort",
+    "subtitle": "Each dot represents 1 person in 100. Darker luminance indicates a higher condition count.",
+    "anchor": "start",
+    "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "fontSize": 16,
+    "fontWeight": 700,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#64748B",
+    "offset": 14
+  },
+  "data": {"url": "data/chart02_waffle_dots.csv"},
+  "params": [
+    {
+      "name": "Sex",
+      "value": "Persons",
+      "bind": {
+        "input": "select",
+        "options": ["Persons", "Female", "Male"],
+        "labels": ["Everyone", "Women", "Men"],
+        "name": "Demographic: "
+      }
+    }
+  ],
+  "transform": [{"filter": "datum.sex == Sex"}],
+  "facet": {
+    "field": "age_label",
+    "type": "ordinal",
+    "sort": ["Aged 0-14", "Aged 15-24", "Aged 25-44", "Aged 45-64", "Aged 65-84", "Aged 85+"],
+    "header": {
+      "title": null,
+      "labelFontSize": 12,
+      "labelFontWeight": 600,
+      "labelColor": "#0A4D52",
+      "labelPadding": 8
+    }
+  },
+  "columns": 3,
+  "spec": {
+    "width": 130,
+    "height": 130,
+    "mark": {
+      "type": "circle",
+      "size": 85,
+      "opacity": 1,
+      "stroke": "#CBD5E1",
+      "strokeWidth": 0.5
+    },
+    "encoding": {
+      "x": {"field": "col", "type": "quantitative", "axis": null, "scale": {"domain": [-0.5, 9.5]}},
+      "y": {"field": "row", "type": "quantitative", "axis": null, "scale": {"domain": [-0.5, 9.5]}},
+      "color": {
+        "field": "n_conditions",
+        "type": "nominal",
+        "title": "Conditions Reported",
+        "scale": {
+          "domain": ["No conditions", "One condition", "Two conditions", "Three or more conditions"],
+          "range": ["#F1F5F9", "#E8A596", "#D46A52", "#7A2816"]
+        },
+        "legend": {
+          "orient": "top",
+          "direction": "horizontal",
+          "symbolSize": 90,
+          "labelFontSize": 11,
+          "labelColor": "#64748B",
+          "titleFontSize": 11,
+          "titleColor": "#1E293B"
+        }
+      },
+      "tooltip": [
+        {"field": "age_label", "type": "nominal", "title": "Age group"},
+        {"field": "n_conditions", "type": "nominal", "title": "Conditions"},
+        {"field": "pct", "type": "quantitative", "title": "Share (%)", "format": ".1f"}
+      ]
+    }
+  },
+  "config": {
+    "view": {"stroke": null}
+  }
+}

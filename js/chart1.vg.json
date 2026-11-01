@@ -1,0 +1,167 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Life Expectancy vs. Healthy Life Expectancy",
+    "subtitle": [
+      "Australia (2000–2021). Select demographic group below to inspect gaps."
+    ],
+    "anchor": "start",
+    "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "fontSize": 16,
+    "fontWeight": 700,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#64748B",
+    "offset": 14
+  },
+  "data": { "url": "data/chart01_life_expectancy.csv" },
+  "params": [
+    {
+      "name": "Group",
+      "value": "Everyone",
+      "bind": {
+        "input": "select",
+        "options": ["Everyone", "Female", "Male"],
+        "name": "Demographic: "
+      }
+    }
+  ],
+  "width": "container",
+  "height": 340,
+  "transform": [{ "filter": "datum.sex == Group" }],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "scale": { "domain": [2000, 2021], "zero": false, "nice": false },
+      "axis": {
+        "title": null,
+        "format": "d",
+        "tickMinStep": 1,
+        "grid": false,
+        "domainColor": "#E2E8F0",
+        "labelColor": "#64748B",
+        "labelFontSize": 11
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "color": "#FBE6E1",
+        "opacity": 0.85,
+        "line": { "color": "#E06D53", "strokeWidth": 2.5 },
+        "clip": true
+      },
+      "encoding": {
+        "y": {
+          "field": "life_expectancy",
+          "type": "quantitative",
+          "title": "Age (years)",
+          "scale": { "domain": [60, 90] },
+          "axis": {
+            "titleColor": "#64748B",
+            "titleFontSize": 11,
+            "labelColor": "#64748B",
+            "labelFontSize": 11,
+            "gridColor": "#F1F5F9"
+          }
+        },
+        "tooltip": [
+          {"field": "year", "type": "quantitative", "title": "Year", "format": "d"},
+          {"field": "life_expectancy", "type": "quantitative", "title": "Life expectancy", "format": ".1f"},
+          {"field": "healthy_life_expectancy", "type": "quantitative", "title": "Healthy life expectancy", "format": ".1f"},
+          {"field": "years_in_poorer_health", "type": "quantitative", "title": "Years in poorer health", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "area",
+        "color": "#D5E7E1",
+        "opacity": 0.95,
+        "line": { "color": "#0A4D52", "strokeWidth": 2.5 },
+        "clip": true
+      },
+      "encoding": {
+        "y": {
+          "field": "healthy_life_expectancy",
+          "type": "quantitative",
+          "scale": { "domain": [60, 90] }
+        },
+        "tooltip": [
+          {"field": "year", "type": "quantitative", "title": "Year", "format": "d"},
+          {"field": "life_expectancy", "type": "quantitative", "title": "Life expectancy", "format": ".1f"},
+          {"field": "healthy_life_expectancy", "type": "quantitative", "title": "Healthy life expectancy", "format": ".1f"},
+          {"field": "years_in_poorer_health", "type": "quantitative", "title": "Years in poorer health", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.year == 2021"},
+        {"calculate": "'Life expectancy: ' + format(datum.life_expectancy, '.1f')", "as": "label"}
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -8,
+        "dy": -10,
+        "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#963620",
+        "clip": true
+      },
+      "encoding": {
+        "y": {"field": "life_expectancy", "type": "quantitative", "scale": {"domain": [60, 90]}},
+        "text": {"field": "label", "type": "nominal"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.year == 2021"},
+        {"calculate": "'Healthy: ' + format(datum.healthy_life_expectancy, '.1f')", "as": "label"}
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -8,
+        "dy": 14,
+        "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#0A4D52",
+        "clip": true
+      },
+      "encoding": {
+        "y": {"field": "healthy_life_expectancy", "type": "quantitative", "scale": {"domain": [60, 90]}},
+        "text": {"field": "label", "type": "nominal"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.year == 2021"},
+        {"calculate": "(datum.life_expectancy + datum.healthy_life_expectancy) / 2", "as": "mid"},
+        {"calculate": "format(datum.years_in_poorer_health, '.1f') + ' yrs in poorer health'", "as": "label"}
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -8,
+        "font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "color": "#782A18",
+        "clip": true
+      },
+      "encoding": {
+        "y": {"field": "mid", "type": "quantitative", "scale": {"domain": [60, 90]}},
+        "text": {"field": "label", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null}
+  }
+}

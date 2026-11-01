@@ -1,0 +1,81 @@
+state,state_short,condition,count,base_persons,rate_pct,national_rate_pct,diff_vs_national_pp
+New South Wales,NSW,Arthritis,679359,7417330,9.159,9.207,-0.048
+Victoria,VIC,Arthritis,518633,6010782,8.628,9.207,-0.579
+Queensland,QLD,Arthritis,456139,4696576,9.712,9.207,0.505
+South Australia,SA,Arthritis,179605,1658133,10.832,9.207,1.625
+Western Australia,WA,Arthritis,202847,2424598,8.366,9.207,-0.841
+Tasmania,TAS,Arthritis,68070,513922,13.245,9.207,4.038
+Northern Territory,NT,Arthritis,10374,204208,5.08,9.207,-4.127
+Australian Capital Territory,ACT,Arthritis,35106,427191,8.218,9.207,-0.989
+New South Wales,NSW,Asthma,625835,7417330,8.437,8.854,-0.417
+Victoria,VIC,Asthma,543047,6010782,9.035,8.854,0.181
+Queensland,QLD,Asthma,438183,4696576,9.33,8.854,0.476
+South Australia,SA,Asthma,159294,1658133,9.607,8.854,0.753
+Western Australia,WA,Asthma,195300,2424598,8.055,8.854,-0.799
+Tasmania,TAS,Asthma,52171,513922,10.152,8.854,1.298
+Northern Territory,NT,Asthma,13085,204208,6.408,8.854,-2.446
+Australian Capital Territory,ACT,Asthma,40839,427191,9.56,8.854,0.706
+New South Wales,NSW,Cancer,227981,7417330,3.074,3.135,-0.061
+Victoria,VIC,Cancer,179326,6010782,2.983,3.135,-0.152
+Queensland,QLD,Cancer,159887,4696576,3.404,3.135,0.269
+South Australia,SA,Cancer,57008,1658133,3.438,3.135,0.303
+Western Australia,WA,Cancer,72864,2424598,3.005,3.135,-0.13
+Tasmania,TAS,Cancer,19104,513922,3.717,3.135,0.582
+Northern Territory,NT,Cancer,3698,204208,1.811,3.135,-1.324
+Australian Capital Territory,ACT,Cancer,12182,427191,2.852,3.135,-0.283
+New South Wales,NSW,Dementia,62706,7417330,0.845,0.81,0.035
+Victoria,VIC,Dementia,45946,6010782,0.764,0.81,-0.046
+Queensland,QLD,Dementia,37680,4696576,0.802,0.81,-0.008
+South Australia,SA,Dementia,17330,1658133,1.045,0.81,0.235
+Western Australia,WA,Dementia,17612,2424598,0.726,0.81,-0.084
+Tasmania,TAS,Dementia,4395,513922,0.855,0.81,0.045
+Northern Territory,NT,Dementia,835,204208,0.409,0.81,-0.401
+Australian Capital Territory,ACT,Dementia,2634,427191,0.617,0.81,-0.193
+New South Wales,NSW,Diabetes,388747,7417330,5.241,5.132,0.109
+Victoria,VIC,Diabetes,303371,6010782,5.047,5.132,-0.085
+Queensland,QLD,Diabetes,231642,4696576,4.932,5.132,-0.2
+South Australia,SA,Diabetes,101606,1658133,6.128,5.132,0.996
+Western Australia,WA,Diabetes,117182,2424598,4.833,5.132,-0.299
+Tasmania,TAS,Diabetes,28394,513922,5.525,5.132,0.393
+Northern Territory,NT,Diabetes,10093,204208,4.943,5.132,-0.189
+Australian Capital Territory,ACT,Diabetes,17501,427191,4.097,5.132,-1.035
+New South Wales,NSW,Heart disease,316840,7417330,4.272,4.278,-0.006
+Victoria,VIC,Heart disease,243130,6010782,4.045,4.278,-0.233
+Queensland,QLD,Heart disease,215678,4696576,4.592,4.278,0.314
+South Australia,SA,Heart disease,82321,1658133,4.965,4.278,0.687
+Western Australia,WA,Heart disease,94523,2424598,3.899,4.278,-0.379
+Tasmania,TAS,Heart disease,25185,513922,4.901,4.278,0.623
+Northern Territory,NT,Heart disease,7151,204208,3.502,4.278,-0.776
+Australian Capital Territory,ACT,Heart disease,14098,427191,3.3,4.278,-0.978
+New South Wales,NSW,Kidney disease,77272,7417330,1.042,0.992,0.05
+Victoria,VIC,Kidney disease,57437,6010782,0.956,0.992,-0.036
+Queensland,QLD,Kidney disease,47737,4696576,1.016,0.992,0.024
+South Australia,SA,Kidney disease,16153,1658133,0.974,0.992,-0.018
+Western Australia,WA,Kidney disease,20352,2424598,0.839,0.992,-0.153
+Tasmania,TAS,Kidney disease,6326,513922,1.231,0.992,0.239
+Northern Territory,NT,Kidney disease,2264,204208,1.109,0.992,0.117
+Australian Capital Territory,ACT,Kidney disease,4194,427191,0.982,0.992,-0.01
+New South Wales,NSW,Lung condition,135909,7417330,1.832,1.889,-0.057
+Victoria,VIC,Lung condition,97270,6010782,1.618,1.889,-0.271
+Queensland,QLD,Lung condition,106989,4696576,2.278,1.889,0.389
+South Australia,SA,Lung condition,36054,1658133,2.174,1.889,0.285
+Western Australia,WA,Lung condition,42087,2424598,1.736,1.889,-0.153
+Tasmania,TAS,Lung condition,14027,513922,2.729,1.889,0.84
+Northern Territory,NT,Lung condition,2716,204208,1.33,1.889,-0.559
+Australian Capital Territory,ACT,Lung condition,5998,427191,1.404,1.889,-0.485
+New South Wales,NSW,Mental health condition,646412,7417330,8.715,9.554,-0.839
+Victoria,VIC,Mental health condition,571150,6010782,9.502,9.554,-0.052
+Queensland,QLD,Mental health condition,496662,4696576,10.575,9.554,1.021
+South Australia,SA,Mental health condition,175203,1658133,10.566,9.554,1.012
+Western Australia,WA,Mental health condition,220581,2424598,9.098,9.554,-0.456
+Tasmania,TAS,Mental health condition,63861,513922,12.426,9.554,2.872
+Northern Territory,NT,Mental health condition,11979,204208,5.866,9.554,-3.688
+Australian Capital Territory,ACT,Mental health condition,45517,427191,10.655,9.554,1.101
+New South Wales,NSW,Stroke,73269,7417330,0.988,1.004,-0.016
+Victoria,VIC,Stroke,59844,6010782,0.996,1.004,-0.008
+Queensland,QLD,Stroke,49769,4696576,1.06,1.004,0.056
+South Australia,SA,Stroke,18763,1658133,1.132,1.004,0.128
+Western Australia,WA,Stroke,21573,2424598,0.89,1.004,-0.114
+Tasmania,TAS,Stroke,6836,513922,1.33,1.004,0.326
+Northern Territory,NT,Stroke,1272,204208,0.623,1.004,-0.381
+Australian Capital Territory,ACT,Stroke,3237,427191,0.758,1.004,-0.246

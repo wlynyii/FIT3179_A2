@@ -1,0 +1,197 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Which conditions are most common at each age?",
+    "subtitle": [
+      "Each line follows one condition. Higher up means more common in that age group (1 = most common).",
+      "Conditions are labelled at their starting ranks (childhood, left) and ending ranks (age 85+, right)."
+    ],
+    "anchor": "start",
+    "font": "Segoe UI, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#5A6570",
+    "offset": 12
+  },
+  "width": 560,
+  "height": 380,
+  "padding": {"left": 20, "right": 20, "top": 10, "bottom": 10},
+  "data": {
+    "url": "data/chart03_bump_condition_rank_by_age.csv",
+    "format": {"type": "csv"}
+  },
+  "params": [
+    {
+      "name": "sex_select",
+      "value": "Persons",
+      "bind": {
+        "input": "radio",
+        "options": ["Persons", "Female", "Male"],
+        "name": "Show: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.sex === sex_select"}
+  ],
+  "layer": [
+    {
+      "encoding": {
+        "x": {
+          "field": "age_band",
+          "type": "ordinal",
+          "sort": [
+            "0-4", "5-9", "10-14", "15-19", "20-24", "25-29",
+            "30-34", "35-39", "40-44", "45-49", "50-54", "55-59",
+            "60-64", "65-69", "70-74", "75-79", "80-84", "85+"
+          ],
+          "axis": {
+            "title": "Age group (years)",
+            "labelAngle": 0,
+            "labelFontSize": 11,
+            "labelOverlap": "parity",
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "titleFontSize": 12
+          },
+          "scale": {"padding": 0.5}
+        },
+        "y": {
+          "field": "rank",
+          "type": "quantitative",
+          "scale": {"domain": [10.5, 0.5]},
+          "axis": {
+            "orient": "left",
+            "title": "Condition at childhood (Rank)",
+            "titleFontSize": 12,
+            "labelFontSize": 11,
+            "domain": false,
+            "ticks": false,
+            "grid": true,
+            "gridColor": "#E2E8F0",
+            "values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            "labelExpr": "{'1': 'Asthma (1)', '2': 'Heart disease (2)', '3': 'Mental health condition (3)', '4': 'Lung condition (4)', '5': 'Kidney disease (5)', '6': 'Cancer (6)', '7': 'Diabetes (7)', '8': 'Arthritis (8)', '9': 'Stroke (9)', '10': 'Dementia (10)'}[datum.value]"
+          }
+        },
+        "color": {
+          "field": "condition",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Asthma",
+              "Mental health condition",
+              "Diabetes",
+              "Kidney disease",
+              "Arthritis",
+              "Cancer",
+              "Lung condition",
+              "Heart disease",
+              "Stroke",
+              "Dementia"
+            ],
+            "range": [
+              "#7FB8A4",
+              "#68A691",
+              "#529480",
+              "#3D8370",
+              "#2B7262",
+              "#1E6255",
+              "#15554B",
+              "#0F4941",
+              "#0A4D52",
+              "#06373B"
+            ]
+          },
+          "legend": null
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "line",
+            "strokeWidth": 3.5,
+            "interpolate": "monotone"
+          },
+          "encoding": {
+            "detail": {"field": "condition", "type": "nominal"},
+            "opacity": {
+              "condition": {"param": "hover_condition", "value": 1},
+              "value": 0.15
+            }
+          }
+        },
+        {
+          "params": [
+            {
+              "name": "hover_condition",
+              "select": {
+                "type": "point",
+                "fields": ["condition"],
+                "on": "pointerover",
+                "clear": "pointerout"
+              }
+            }
+          ],
+          "mark": {
+            "type": "circle",
+            "size": 75,
+            "stroke": "white",
+            "strokeWidth": 1.5
+          },
+          "encoding": {
+            "opacity": {
+              "condition": {"param": "hover_condition", "value": 1},
+              "value": 0.15
+            },
+            "tooltip": [
+              {"field": "condition", "type": "nominal", "title": "Condition"},
+              {"field": "age_band", "type": "ordinal", "title": "Age group"},
+              {"field": "rank", "type": "quantitative", "title": "Rank"},
+              {"field": "rate_pct", "type": "quantitative", "title": "% of age group", "format": ".1f"},
+              {"field": "count", "type": "quantitative", "title": "People", "format": ","}
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {"filter": "datum.age_order === 18"}
+      ],
+      "mark": {"type": "point", "opacity": 0},
+      "encoding": {
+        "x": {
+          "field": "age_band",
+          "type": "ordinal",
+          "sort": [
+            "0-4", "5-9", "10-14", "15-19", "20-24", "25-29",
+            "30-34", "35-39", "40-44", "45-49", "50-54", "55-59",
+            "60-64", "65-69", "70-74", "75-79", "80-84", "85+"
+          ],
+          "axis": null
+        },
+        "y": {
+          "field": "rank",
+          "type": "quantitative",
+          "scale": {"domain": [10.5, 0.5]},
+          "axis": {
+            "orient": "right",
+            "title": "Condition at age 85+ (Rank)",
+            "titleFontSize": 12,
+            "labelFontSize": 11,
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            "labelExpr": "{'1': '(1) Arthritis', '2': '(2) Heart disease', '3': '(3) Dementia', '4': '(4) Diabetes', '5': '(5) Cancer', '6': '(6) Mental health condition', '7': '(7) Lung condition', '8': '(8) Asthma', '9': '(9) Stroke', '10': '(10) Kidney disease'}[datum.value]"
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Segoe UI, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif",
+    "view": {"stroke": null}
+  }
+}
